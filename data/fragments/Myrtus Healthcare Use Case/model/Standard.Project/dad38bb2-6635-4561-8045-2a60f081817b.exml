@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="UML-BPMN" version="4">
+  <OBJECT>
+    <ID name="UML-BPMN" mc="Standard.Project" uid="dad38bb2-6635-4561-8045-2a60f081817b"/>
+    <ATTRIBUTES>
+      <ATT name="ProjectContext"></ATT>
+      <ATT name="ProjectDescr"></ATT>
+      <ATT name="Name"><![CDATA[UML-BPMN]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="Model">
+        <COMPID name="Modèle" mc="Standard.Package" uid="33f35679-9356-4a74-81b2-5a6c7259d2ff"/>
+      </COMP>
+      <COMP relation="DiagramRoot">
+        <COMPID name="User folders" mc="Infrastructure.DiagramSet" uid="0754b375-c791-4273-94d7-ee76cfa448f0"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

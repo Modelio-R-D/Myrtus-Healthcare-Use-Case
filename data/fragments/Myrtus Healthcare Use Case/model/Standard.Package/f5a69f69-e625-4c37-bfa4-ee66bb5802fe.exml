@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Compute node types" version="4">
+  <OBJECT>
+    <ID name="Compute node types" mc="Standard.Package" uid="f5a69f69-e625-4c37-bfa4-ee66bb5802fe"/>
+    <PID name="Node types" mc="Standard.Package" uid="1cc970cc-b055-429a-8e14-152e4622437b"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Compute node types]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="FogServer" mc="Standard.Class" uid="9e548bfc-838b-468d-b9d7-f44ca268375b"/>
+        <COMPID name="SensorHub" mc="Standard.Class" uid="7a5fddcd-c7cf-4269-a87f-8b9fdb18108e"/>
+        <COMPID name="VRHeadset" mc="Standard.Class" uid="be269937-7faa-4219-9e5a-85f401dfee40"/>
+        <COMPID name="CloudServer" mc="Standard.Class" uid="f932d5be-f489-4181-86c3-74a816e4dca6"/>
+      </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="TGroup" mc="Infrastructure.Stereotype" uid="572d5cb4-54c7-45d0-a9c8-3dc3677f9ef3"/>
+      </LINK>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

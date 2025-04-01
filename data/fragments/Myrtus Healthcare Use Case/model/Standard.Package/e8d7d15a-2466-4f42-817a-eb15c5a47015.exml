@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Cloud Group" version="4">
+  <OBJECT>
+    <ID name="Cloud Group" mc="Standard.Package" uid="e8d7d15a-2466-4f42-817a-eb15c5a47015"/>
+    <PID name="Node templates" mc="Standard.Package" uid="7ce043ba-788e-4194-8ada-7a175c75803f"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Cloud Group]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="CloudServer1" mc="Standard.Class" uid="a7284cf9-e1e8-4e78-9b7e-1030b00471e0"/>
+        <COMPID name="GameServer1" mc="Standard.Class" uid="5c231802-c6b6-4eb3-87b9-8ae4708d5d94"/>
+        <COMPID name="DataStorage1" mc="Standard.Class" uid="52c9746f-69cd-443d-b507-6935c9af0041"/>
+        <COMPID name="Analytics1" mc="Standard.Class" uid="f775414e-3bd6-426a-8fd7-7ae1780a73fd"/>
+        <COMPID name="AILearning1 " mc="Standard.Class" uid="bc14ab89-a664-4648-a313-38149a9ea2da"/>
+      </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="TGroup" mc="Infrastructure.Stereotype" uid="572d5cb4-54c7-45d0-a9c8-3dc3677f9ef3"/>
+      </LINK>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

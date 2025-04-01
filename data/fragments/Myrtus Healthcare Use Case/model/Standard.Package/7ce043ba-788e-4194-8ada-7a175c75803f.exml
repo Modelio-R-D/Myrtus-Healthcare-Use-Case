@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Node templates" version="4">
+  <OBJECT>
+    <ID name="Node templates" mc="Standard.Package" uid="7ce043ba-788e-4194-8ada-7a175c75803f"/>
+    <PID name="Service Template" mc="Standard.Package" uid="b5835c4f-73e2-474c-ac26-2946dfa3946f"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Node templates]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Package" mc="Standard.Package" uid="ea263602-608b-4d19-85e5-ef69628302b3"/>
+        <COMPID name="Package1" mc="Standard.Package" uid="3b037dbb-070a-4bde-94e2-8b53cb0d9323"/>
+        <COMPID name="Package2" mc="Standard.Package" uid="e8d7d15a-2466-4f42-817a-eb15c5a47015"/>
+      </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="TGroup" mc="Infrastructure.Stereotype" uid="572d5cb4-54c7-45d0-a9c8-3dc3677f9ef3"/>
+      </LINK>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

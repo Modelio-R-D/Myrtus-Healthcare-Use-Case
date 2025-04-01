@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Tosca model diagram" version="4">
+  <OBJECT>
+    <ID name="Tosca model diagram" mc="Standard.StaticDiagram" uid="526f6b68-0292-411f-bbf5-29a1194cd44c"/>
+    <PID name="Tosca model" mc="Standard.Package" uid="231f8c52-4b17-408c-aa38-666518ea423b"/>
+    <ATTRIBUTES>
+      <ATT name="UiDataVersion">2</ATT>
+      <ATT name="UiData"><![CDATA[eJztVd9P2zAQ/lcsv9dtslCtUiiCBlUVGUUtm8QTcuJrZnDsynah+e/n/CiQsnaZhMbLnmL7fN99d/ddHJ5tc4GeQBuu5Cn2yACjs3E4Tx4gtYgzd4SRLdZwipXOSK4YCK7IJhfEWGr5I+M00zQnwLhVmoCAHKQ1tTXdWaf5stpH9R6jnD4off8Sd4DH4Y1Wa9C2QJLmLpyghdrYiFrqbD+o2EDDQ26EwP1x2N85vHNd2kIAbmXh/y6LHTtT3jckVRpI7duB34SalDJgu2CXW7uAVcco1w6i8USwtVEycxyrZbm4VQ66trbz7NcZHctdg6AWmKOyV7Zv5RF6Kk/KClHJqGak1RZ04g9Xw2T4tTfwR34v8LxVL0lWJz1/RD1vFKQsCNLjpRfU2CupnmVMExB7FJZWc5nhcZUfquqDmuqE/eri0cyUgJmcqHytDLeuLQfQO0BNfnLBNJQIMTdlPZvPQY+Yy0fT/fpFFmn67OjEtADdluKXY1J8mR9W+xsiSgQ3QC3AfzM/f+f1ycrj7IAeoimJz+8uF/cX55Or6WL+/Tr6GIl0mMa3TXuVzxsxBP/F8DliuJ3ffLQK/vRT2HsESdOwPaYzaSEru9rUyDvwBvwCdHKw7Q==]]></ATT>
+      <ATT name="PreviewData"><![CDATA[data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAIAAAAmdTLBAAAAGElEQVR4nGP4TxlgGNU/qn9U/6j+EaofAB8cJiE1IQRUAAAAAElFTkSuQmCC]]></ATT>
+      <ATT name="JsStructure"></ATT>
+      <ATT name="Name"><![CDATA[Tosca model diagram]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <LINK relation="Extension">
+        <FOREIGNID name="ToscaDiagram" mc="Infrastructure.Stereotype" uid="dddbe647-1f21-42d1-93cd-f61109a8afd3"/>
+      </LINK>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

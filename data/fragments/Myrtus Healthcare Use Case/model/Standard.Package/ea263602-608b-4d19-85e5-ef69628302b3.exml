@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Edge Group" version="4">
+  <OBJECT>
+    <ID name="Edge Group" mc="Standard.Package" uid="ea263602-608b-4d19-85e5-ef69628302b3"/>
+    <PID name="Node templates" mc="Standard.Package" uid="7ce043ba-788e-4194-8ada-7a175c75803f"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Edge Group]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="VRHeadset1" mc="Standard.Class" uid="0277f5dc-e586-469e-a700-98324383c403"/>
+        <COMPID name="SensorHub1 " mc="Standard.Class" uid="6eb2c5f3-4249-4afb-a8d6-9f8b9a253843"/>
+      </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="TGroup" mc="Infrastructure.Stereotype" uid="572d5cb4-54c7-45d0-a9c8-3dc3677f9ef3"/>
+      </LINK>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>
