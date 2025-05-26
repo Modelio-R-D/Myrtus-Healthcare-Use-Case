@@ -23,7 +23,7 @@
             </LINK>
             <COMP relation="Descriptor">
               <OBJECT>
-                <ID name="" mc="Infrastructure.Note" uid="088ef459-d7da-468e-9dda-75949900fae1"/>
+                <ID name="" mc="Infrastructure.Note" uid="474d5288-3fba-4efc-aace-9cda6ff7f57b"/>
                 <ATTRIBUTES>
                   <ATT name="Content"><![CDATA[%propertydefinition.TParameterTable.name.description]]></ATT>
                   <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
@@ -53,7 +53,7 @@
             </LINK>
             <COMP relation="Descriptor">
               <OBJECT>
-                <ID name="" mc="Infrastructure.Note" uid="ccf49ab0-115c-4182-bc81-128d0043b1c3"/>
+                <ID name="" mc="Infrastructure.Note" uid="a238de75-f5e2-4a01-a6f1-63245690cf76"/>
                 <ATTRIBUTES>
                   <ATT name="Content"><![CDATA[%propertydefinition.TParameterTable.required.description]]></ATT>
                   <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
@@ -83,9 +83,159 @@
             </LINK>
             <COMP relation="Descriptor">
               <OBJECT>
-                <ID name="" mc="Infrastructure.Note" uid="ccdf5b74-98c0-40f3-a09f-97664f7db774"/>
+                <ID name="" mc="Infrastructure.Note" uid="7a62df2f-6d98-46ba-bc89-0d0b43aa26cb"/>
                 <ATTRIBUTES>
                   <ATT name="Content"><![CDATA[%propertydefinition.TParameterTable.type.description]]></ATT>
+                  <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="description" mc="Infrastructure.PropertyDefinition" uid="73c42be6-f152-4cd9-96e7-811cbdc19855"/>
+          <ATTRIBUTES>
+            <ATT name="IsEditable">true</ATT>
+            <ATT name="DefaultValue"></ATT>
+            <ATT name="Name"><![CDATA[description]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Type">
+              <FOREIGNID name="Text" mc="Infrastructure.PropertyType" uid="01a40888-0000-002a-0000-000000000000"/>
+            </LINK>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Infrastructure.Note" uid="79c2ea86-0ff7-4017-946d-f51fd3176d76"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[%propertydefinition.TParameterTable.description.description]]></ATT>
+                  <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="value" mc="Infrastructure.PropertyDefinition" uid="b90789da-89e2-4e67-95f5-afaeae60527f"/>
+          <ATTRIBUTES>
+            <ATT name="IsEditable">true</ATT>
+            <ATT name="DefaultValue"></ATT>
+            <ATT name="Name"><![CDATA[value]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Type">
+              <FOREIGNID name="Text" mc="Infrastructure.PropertyType" uid="01a40888-0000-002a-0000-000000000000"/>
+            </LINK>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Infrastructure.Note" uid="da5dd3a3-c5a8-46f4-b59b-90e4475e7640"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[%propertydefinition.TParameterTable.value.description]]></ATT>
+                  <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="default" mc="Infrastructure.PropertyDefinition" uid="77d5b3fc-e752-44d0-a52c-3d3b6fa2755a"/>
+          <ATTRIBUTES>
+            <ATT name="IsEditable">true</ATT>
+            <ATT name="DefaultValue"></ATT>
+            <ATT name="Name"><![CDATA[default]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Type">
+              <FOREIGNID name="Text" mc="Infrastructure.PropertyType" uid="01a40888-0000-002a-0000-000000000000"/>
+            </LINK>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Infrastructure.Note" uid="ae657b46-d6bc-424a-968b-49e50481e858"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[%propertydefinition.TParameterTable.default.description]]></ATT>
+                  <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="status" mc="Infrastructure.PropertyDefinition" uid="af62ecb0-8deb-4e68-bb5f-c38a90d1ddc6"/>
+          <ATTRIBUTES>
+            <ATT name="IsEditable">true</ATT>
+            <ATT name="DefaultValue"></ATT>
+            <ATT name="Name"><![CDATA[status]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Type">
+              <FOREIGNID name="Text" mc="Infrastructure.PropertyType" uid="01a40888-0000-002a-0000-000000000000"/>
+            </LINK>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Infrastructure.Note" uid="ea410f3a-3767-4d3f-8570-d66025ac1d4c"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[%propertydefinition.TParameterTable.status.description]]></ATT>
+                  <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="constraints" mc="Infrastructure.PropertyDefinition" uid="5e5812ea-e124-41ef-8d85-dc46d49636a9"/>
+          <ATTRIBUTES>
+            <ATT name="IsEditable">true</ATT>
+            <ATT name="DefaultValue"></ATT>
+            <ATT name="Name"><![CDATA[constraints]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Type">
+              <FOREIGNID name="Text" mc="Infrastructure.PropertyType" uid="01a40888-0000-002a-0000-000000000000"/>
+            </LINK>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Infrastructure.Note" uid="e9b07ab1-7d18-4881-8d6b-a5c440cb12fd"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[%propertydefinition.TParameterTable.constraints.description]]></ATT>
                   <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>

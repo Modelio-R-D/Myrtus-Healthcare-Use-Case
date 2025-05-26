@@ -16,7 +16,9 @@
     </ATTRIBUTES>
     <DEPENDENCIES>
       <COMP relation="OwnedElement">
-        <COMPID name="sensor_data" mc="Standard.Class" uid="80e479f8-dbb0-4a66-ba3b-aa02b28ac7fe"/>
+        <COMPID name="os" mc="Standard.Class" uid="80e479f8-dbb0-4a66-ba3b-aa02b28ac7fe"/>
+        <COMPID name="sensor_data" mc="Standard.Class" uid="ec8f7b3c-becf-42ed-a7f9-829812d54518"/>
+        <COMPID name="sensor_data" mc="Standard.Class" uid="df3e30a8-60f6-49e8-b8ff-f65ea1df15af"/>
       </COMP>
       <LINK relation="Extension">
         <FOREIGNID name="TCapabilityDefinitionsType" mc="Infrastructure.Stereotype" uid="ac0418b1-a726-46e6-ac59-310f0055050f"/>

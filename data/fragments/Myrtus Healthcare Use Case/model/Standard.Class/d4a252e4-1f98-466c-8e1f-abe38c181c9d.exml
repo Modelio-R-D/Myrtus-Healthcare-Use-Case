@@ -1,0 +1,246 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="virtual_agent_behavior_output" version="4">
+  <OBJECT>
+    <ID name="virtual_agent_behavior_output" mc="Standard.Class" uid="d4a252e4-1f98-466c-8e1f-abe38c181c9d"/>
+    <PID name="Capabilities" mc="Standard.Class" uid="62ee16b1-83c9-48e1-94c2-3ea51ff00764"/>
+    <ATTRIBUTES>
+      <ATT name="IsActive">false</ATT>
+      <ATT name="IsMain">false</ATT>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[virtual_agent_behavior_output]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedAttribute">
+        <OBJECT>
+          <ID name="protocol" mc="Standard.Attribute" uid="c3ab6cd3-1e36-4bcc-8ba9-b4d956c1f0a4"/>
+          <ATTRIBUTES>
+            <ATT name="TypeConstraint"></ATT>
+            <ATT name="Value"><![CDATA[REST]]></ATT>
+            <ATT name="TargetIsClass">false</ATT>
+            <ATT name="Changeable">AccesNone</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[protocol]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Type">
+              <FOREIGNID name="string" mc="Standard.DataType" uid="00000004-0000-000d-0000-000000000000"/>
+            </LINK>
+            <LINK relation="Extension">
+              <FOREIGNID name="PropertyDefinitionType" mc="Infrastructure.Stereotype" uid="34943474-c962-4064-b5f1-c6008ebb3c9d"/>
+            </LINK>
+            <COMP relation="Properties">
+              <OBJECT>
+                <ID name="34943474-c962-4064-b5f1-c6008ebb3c9d" mc="Infrastructure.TypedPropertyTable" uid="83aee2bb-9fb3-4258-9d22-a5fb8531422c"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[34943474-c962-4064-b5f1-c6008ebb3c9d]]></ATT>
+                  <ATT name="Content"><![CDATA[#Sun May 25 14:03:29 CEST 2025
+description=Protocol for sensor data streaming
+]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="PropertyDefinitionTypeTable" mc="Infrastructure.PropertyTableDefinition" uid="10a88662-c943-4c1c-92a8-9212d97d684d"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Infrastructure.Note" uid="e742c67e-8469-441f-bb0d-30141c9cbfae"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[<Saisir le texte de la note ici>]]></ATT>
+                  <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="port" mc="Standard.Attribute" uid="9989b81c-2fd7-410e-a949-3eadc96c743c"/>
+          <ATTRIBUTES>
+            <ATT name="TypeConstraint"></ATT>
+            <ATT name="Value"><![CDATA[8001]]></ATT>
+            <ATT name="TargetIsClass">false</ATT>
+            <ATT name="Changeable">AccesNone</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[port]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Type">
+              <FOREIGNID name="integer" mc="Standard.DataType" uid="00000004-0000-0009-0000-000000000000"/>
+            </LINK>
+            <LINK relation="Extension">
+              <FOREIGNID name="PropertyDefinitionType" mc="Infrastructure.Stereotype" uid="34943474-c962-4064-b5f1-c6008ebb3c9d"/>
+            </LINK>
+            <COMP relation="Properties">
+              <OBJECT>
+                <ID name="34943474-c962-4064-b5f1-c6008ebb3c9d" mc="Infrastructure.TypedPropertyTable" uid="5d9da3bc-f4bc-4730-80e0-0d77290010aa"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[34943474-c962-4064-b5f1-c6008ebb3c9d]]></ATT>
+                  <ATT name="Content"><![CDATA[#Sun May 25 14:00:57 CEST 2025
+description=For IoT/sensor hubs
+]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="PropertyDefinitionTypeTable" mc="Infrastructure.PropertyTableDefinition" uid="10a88662-c943-4c1c-92a8-9212d97d684d"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Infrastructure.Note" uid="eaaf621c-9515-4f0a-86f9-03e0634ca3da"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[<Saisir le texte de la note ici>]]></ATT>
+                  <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="secure" mc="Standard.Attribute" uid="3d5eadc4-103f-4caa-ba6d-cc43da0fdbd6"/>
+          <ATTRIBUTES>
+            <ATT name="TypeConstraint"></ATT>
+            <ATT name="Value"><![CDATA[true]]></ATT>
+            <ATT name="TargetIsClass">false</ATT>
+            <ATT name="Changeable">AccesNone</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[secure]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Type">
+              <FOREIGNID name="boolean" mc="Standard.DataType" uid="00000004-0000-0005-0000-000000000000"/>
+            </LINK>
+            <LINK relation="Extension">
+              <FOREIGNID name="PropertyDefinitionType" mc="Infrastructure.Stereotype" uid="34943474-c962-4064-b5f1-c6008ebb3c9d"/>
+            </LINK>
+            <COMP relation="Properties">
+              <OBJECT>
+                <ID name="34943474-c962-4064-b5f1-c6008ebb3c9d" mc="Infrastructure.TypedPropertyTable" uid="ef8196c0-d88f-4db2-9cfb-9e00ec5daead"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[34943474-c962-4064-b5f1-c6008ebb3c9d]]></ATT>
+                  <ATT name="Content"><![CDATA[#Sun May 25 14:06:42 CEST 2025
+description=Assuming initial unencrypted for raw sensor data
+]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="PropertyDefinitionTypeTable" mc="Infrastructure.PropertyTableDefinition" uid="10a88662-c943-4c1c-92a8-9212d97d684d"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Infrastructure.Note" uid="951e0c25-03f0-49f8-99e8-88f983ad1578"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[<Saisir le texte de la note ici>]]></ATT>
+                  <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="TCapabilityDefinition" mc="Infrastructure.Stereotype" uid="92f8cb40-9498-4759-9c75-6b4df72de355"/>
+      </LINK>
+      <COMP relation="DependsOnDependency">
+        <OBJECT>
+          <ID name="capabilityType" mc="Infrastructure.Dependency" uid="f18143e6-fd26-4a79-8275-859b620cb630"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[capabilityType]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="DependsOn">
+              <FOREIGNID name="Endpoint.Admin" mc="Standard.Class" uid="f34cca6d-3c2a-40f4-9715-c7e01f2b494d"/>
+            </LINK>
+            <LINK relation="Extension">
+              <FOREIGNID name="MDAAssocDep" mc="Infrastructure.Stereotype" uid="94b7efa5-f94c-4d1d-896f-f103e56a8e2e"/>
+            </LINK>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="" mc="Infrastructure.TaggedValue" uid="6925bc82-5069-4fb3-be56-45f5cc778742"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Actual">
+                    <OBJECT>
+                      <ID name="" mc="Infrastructure.TagParameter" uid="b4bff492-73c4-40c6-a348-91d080387df7"/>
+                      <ATTRIBUTES>
+                        <ATT name="Value"><![CDATA[capabilityType]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="role" mc="Infrastructure.TagType" uid="7637f2fd-b750-43c1-a15c-5d0b084ca1cd"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

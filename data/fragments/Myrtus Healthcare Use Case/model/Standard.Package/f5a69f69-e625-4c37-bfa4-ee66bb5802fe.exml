@@ -14,10 +14,12 @@
     </ATTRIBUTES>
     <DEPENDENCIES>
       <COMP relation="OwnedElement">
+        <COMPID name="MyrtoCompute" mc="Standard.Class" uid="c16f13df-55ee-4927-8526-3d6b5387bdbc"/>
         <COMPID name="FogServer" mc="Standard.Class" uid="9e548bfc-838b-468d-b9d7-f44ca268375b"/>
         <COMPID name="SensorHub" mc="Standard.Class" uid="7a5fddcd-c7cf-4269-a87f-8b9fdb18108e"/>
         <COMPID name="VRHeadset" mc="Standard.Class" uid="be269937-7faa-4219-9e5a-85f401dfee40"/>
         <COMPID name="CloudServer" mc="Standard.Class" uid="f932d5be-f489-4181-86c3-74a816e4dca6"/>
+        <COMPID name="TherapistWorkstation" mc="Standard.Class" uid="95aa893b-e88c-4b03-9165-226811a8ab0c"/>
       </COMP>
       <LINK relation="Extension">
         <FOREIGNID name="TGroup" mc="Infrastructure.Stereotype" uid="572d5cb4-54c7-45d0-a9c8-3dc3677f9ef3"/>

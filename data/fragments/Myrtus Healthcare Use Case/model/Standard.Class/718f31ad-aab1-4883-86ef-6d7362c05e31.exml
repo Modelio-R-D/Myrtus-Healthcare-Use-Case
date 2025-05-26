@@ -1,0 +1,121 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="p2p_communication" version="4">
+  <OBJECT>
+    <ID name="p2p_communication" mc="Standard.Class" uid="718f31ad-aab1-4883-86ef-6d7362c05e31"/>
+    <PID name="Requirements" mc="Standard.Class" uid="be03f0c4-82b5-490c-8a33-f6eb260f4571"/>
+    <ATTRIBUTES>
+      <ATT name="IsActive">false</ATT>
+      <ATT name="IsMain">false</ATT>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[p2p_communication]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <LINK relation="Extension">
+        <FOREIGNID name="TRequirementDefinition" mc="Infrastructure.Stereotype" uid="2637c4bd-ca93-4012-82ea-8ef2ba5ca444"/>
+      </LINK>
+      <COMP relation="DependsOnDependency">
+        <OBJECT>
+          <ID name="relationshipType" mc="Infrastructure.Dependency" uid="c7d887b0-e58a-4997-ab18-a4aede924be5"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[relationshipType]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="DependsOn">
+              <FOREIGNID name="connectsTo" mc="Standard.Class" uid="f729282f-5d09-4f42-bebe-bbeab2bab145"/>
+            </LINK>
+            <LINK relation="Extension">
+              <FOREIGNID name="MDAAssocDep" mc="Infrastructure.Stereotype" uid="94b7efa5-f94c-4d1d-896f-f103e56a8e2e"/>
+            </LINK>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="" mc="Infrastructure.TaggedValue" uid="00690973-5450-44fa-aedb-765bb35615be"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Actual">
+                    <OBJECT>
+                      <ID name="" mc="Infrastructure.TagParameter" uid="58ee8cb7-d91d-4af5-b7e7-606ea557788e"/>
+                      <ATTRIBUTES>
+                        <ATT name="Value"><![CDATA[relationshipType]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="role" mc="Infrastructure.TagType" uid="7637f2fd-b750-43c1-a15c-5d0b084ca1cd"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="nodeType" mc="Infrastructure.Dependency" uid="8c92e354-e1ab-4a8c-8c2a-9e410caeaf9c"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[nodeType]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="DependsOn">
+              <ID name="VRHeadset" mc="Standard.Class" uid="be269937-7faa-4219-9e5a-85f401dfee40"/>
+            </LINK>
+            <LINK relation="Extension">
+              <FOREIGNID name="MDAAssocDep" mc="Infrastructure.Stereotype" uid="94b7efa5-f94c-4d1d-896f-f103e56a8e2e"/>
+            </LINK>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="" mc="Infrastructure.TaggedValue" uid="d262c24b-1836-4f26-8bf1-838550c28565"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Actual">
+                    <OBJECT>
+                      <ID name="" mc="Infrastructure.TagParameter" uid="d9be0cf2-be9c-47c4-b1f4-64947dc5d852"/>
+                      <ATTRIBUTES>
+                        <ATT name="Value"><![CDATA[nodeType]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="role" mc="Infrastructure.TagType" uid="7637f2fd-b750-43c1-a15c-5d0b084ca1cd"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="Properties">
+        <OBJECT>
+          <ID name="2637c4bd-ca93-4012-82ea-8ef2ba5ca444" mc="Infrastructure.TypedPropertyTable" uid="7108eee5-e949-4fe7-86aa-db061027c18b"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[2637c4bd-ca93-4012-82ea-8ef2ba5ca444]]></ATT>
+            <ATT name="Content"><![CDATA[#Thu May 22 16:29:48 CEST 2025
+lowerBound=1
+upperBound=1
+]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Type">
+              <FOREIGNID name="TRequirementDefinitionTable" mc="Infrastructure.PropertyTableDefinition" uid="620d9ee4-1487-4477-9f9c-f46321456d98"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

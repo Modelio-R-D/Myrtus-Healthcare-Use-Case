@@ -2,7 +2,7 @@
 <!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="VALogic" version="4">
   <OBJECT>
     <ID name="VALogic" mc="Standard.Class" uid="9a7f69c9-c39f-4b78-a824-45e1cdce6c25"/>
-    <PID name="Software Component nodes" mc="Standard.Package" uid="286d4847-3377-420b-afed-9b63d4030a26"/>
+    <PID name="Software Component node types" mc="Standard.Package" uid="286d4847-3377-420b-afed-9b63d4030a26"/>
     <ATTRIBUTES>
       <ATT name="IsActive">false</ATT>
       <ATT name="IsMain">false</ATT>
@@ -43,6 +43,10 @@
             </LINK>
           </DEPENDENCIES>
         </OBJECT>
+      </COMP>
+      <COMP relation="OwnedElement">
+        <COMPID name="Capabilities" mc="Standard.Class" uid="62ee16b1-83c9-48e1-94c2-3ea51ff00764"/>
+        <COMPID name="Requirements" mc="Standard.Class" uid="580a58d5-1267-4995-98ed-1b26a03542e0"/>
       </COMP>
       <LINK relation="Extension">
         <FOREIGNID name="TNodeType" mc="Infrastructure.Stereotype" uid="47cdd09e-013d-4670-b757-f5736d2bb48c"/>

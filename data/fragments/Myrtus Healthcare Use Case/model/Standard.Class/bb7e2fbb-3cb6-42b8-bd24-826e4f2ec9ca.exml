@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="performance_fps_policy" version="4">
+  <OBJECT>
+    <ID name="performance_fps_policy" mc="Standard.Class" uid="bb7e2fbb-3cb6-42b8-bd24-826e4f2ec9ca"/>
+    <PID name="Policies" mc="Standard.Class" uid="0986b83c-5d5a-4c75-b921-aad0f4662f17"/>
+    <ATTRIBUTES>
+      <ATT name="IsActive">false</ATT>
+      <ATT name="IsMain">false</ATT>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[performance_fps_policy]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <LINK relation="Extension">
+        <FOREIGNID name="TPolicy" mc="Infrastructure.Stereotype" uid="afe2c9ed-9fab-4a53-a2d2-b52d849d0799"/>
+      </LINK>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

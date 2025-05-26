@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Requirements" version="4">
+  <OBJECT>
+    <ID name="Requirements" mc="Standard.Class" uid="1e2d0153-8802-4216-b944-c61784cd1eb9"/>
+    <PID name="SensorHub" mc="Standard.Class" uid="7a5fddcd-c7cf-4269-a87f-8b9fdb18108e"/>
+    <ATTRIBUTES>
+      <ATT name="IsActive">false</ATT>
+      <ATT name="IsMain">false</ATT>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Requirements]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="network_connection" mc="Standard.Class" uid="0342588c-5c29-4d6e-b340-ba5d709d2447"/>
+      </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="TRequirementDefinitionType" mc="Infrastructure.Stereotype" uid="622c76d1-f337-471e-984a-2af659417163"/>
+      </LINK>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

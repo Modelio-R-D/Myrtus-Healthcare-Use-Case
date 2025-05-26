@@ -23,7 +23,7 @@
             </LINK>
             <COMP relation="Descriptor">
               <OBJECT>
-                <ID name="" mc="Infrastructure.Note" uid="4bac7b65-0273-41fa-9a9f-844d50c34916"/>
+                <ID name="" mc="Infrastructure.Note" uid="a4fea376-1603-4247-b279-b81f99b46e38"/>
                 <ATTRIBUTES>
                   <ATT name="Content"><![CDATA[%propertydefinition.TriggerTable.description.description]]></ATT>
                   <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
@@ -53,7 +53,7 @@
             </LINK>
             <COMP relation="Descriptor">
               <OBJECT>
-                <ID name="" mc="Infrastructure.Note" uid="85c69dbe-6ad5-4939-a311-6e25b3627e31"/>
+                <ID name="" mc="Infrastructure.Note" uid="0e02ed06-0c5a-4b8d-9ade-b01d3013746c"/>
                 <ATTRIBUTES>
                   <ATT name="Content"><![CDATA[%propertydefinition.TriggerTable.event.description]]></ATT>
                   <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
@@ -83,7 +83,7 @@
             </LINK>
             <COMP relation="Descriptor">
               <OBJECT>
-                <ID name="" mc="Infrastructure.Note" uid="249297c3-b6b1-4031-9eac-c294b807114f"/>
+                <ID name="" mc="Infrastructure.Note" uid="f9f2aecc-34a5-4aca-aa66-135e3ad242b6"/>
                 <ATTRIBUTES>
                   <ATT name="Content"><![CDATA[%propertydefinition.TriggerTable.schedule.description]]></ATT>
                   <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
@@ -113,7 +113,7 @@
             </LINK>
             <COMP relation="Descriptor">
               <OBJECT>
-                <ID name="" mc="Infrastructure.Note" uid="96f39f38-af72-40c2-bde4-fb933a7c41f4"/>
+                <ID name="" mc="Infrastructure.Note" uid="69ed0351-9070-4769-9a0c-5fb2b7ea353e"/>
                 <ATTRIBUTES>
                   <ATT name="Content"><![CDATA[%propertydefinition.TriggerTable.target_filter.description]]></ATT>
                   <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
@@ -143,7 +143,7 @@
             </LINK>
             <COMP relation="Descriptor">
               <OBJECT>
-                <ID name="" mc="Infrastructure.Note" uid="b4f3b4b4-6ec8-4704-a96e-6d0713d91a02"/>
+                <ID name="" mc="Infrastructure.Note" uid="19efabc0-fe6c-41c1-b05f-40b8f17f8af6"/>
                 <ATTRIBUTES>
                   <ATT name="Content"><![CDATA[%propertydefinition.TriggerTable.condition.description]]></ATT>
                   <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
@@ -173,7 +173,7 @@
             </LINK>
             <COMP relation="Descriptor">
               <OBJECT>
-                <ID name="" mc="Infrastructure.Note" uid="92819b09-624a-4bb4-88d2-f45ff00a02fc"/>
+                <ID name="" mc="Infrastructure.Note" uid="5f6a42ee-77ed-444a-8e7c-bfeea094f4eb"/>
                 <ATTRIBUTES>
                   <ATT name="Content"><![CDATA[%propertydefinition.TriggerTable.action.description]]></ATT>
                   <ATT name="MimeType"><![CDATA[text/plain]]></ATT>

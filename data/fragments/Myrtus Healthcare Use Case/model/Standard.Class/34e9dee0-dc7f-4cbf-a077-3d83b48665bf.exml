@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Requirements" version="4">
+  <OBJECT>
+    <ID name="Requirements" mc="Standard.Class" uid="34e9dee0-dc7f-4cbf-a077-3d83b48665bf"/>
+    <PID name="CloudServer" mc="Standard.Class" uid="f932d5be-f489-4181-86c3-74a816e4dca6"/>
+    <ATTRIBUTES>
+      <ATT name="IsActive">false</ATT>
+      <ATT name="IsMain">false</ATT>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Requirements]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="network_connection" mc="Standard.Class" uid="bbca4fc7-bfc3-4822-bc98-d47578889b13"/>
+      </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="TRequirementDefinitionType" mc="Infrastructure.Stereotype" uid="622c76d1-f337-471e-984a-2af659417163"/>
+      </LINK>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

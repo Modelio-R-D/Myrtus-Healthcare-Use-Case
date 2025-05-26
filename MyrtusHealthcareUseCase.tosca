@@ -1,0 +1,781 @@
+tosca_definitions_version: tosca_simple_yaml_1_3
+
+node_types:
+  # Compute Node Types
+  Compute:
+    derived_from: tosca.nodes.Compute
+    properties:
+      cpu_frequency:
+        type: string
+        description: CPU frequency of the compute node.
+      num_cpus:
+        type: integer
+        description: Number of CPUs in the compute node.
+      mem_size:
+        type: string
+        description: Memory size of the compute node.
+      os_family:
+        type: string
+        description: Operating system family of the compute node.
+      network_interfaces:
+        type: integer
+        description: Number of network interfaces.
+      storage_capacity:
+        type: string
+        description: Storage capacity of the compute node.
+    capabilities:
+      os:
+        type: tosca.capabilities.OperatingSystem
+        properties:
+          architecture: x86_64
+          type: Linux # Default, can be overridden by derived types
+      host:
+        type: tosca.capabilities.Container.Runtime
+        properties:
+          supported_types: [tosca.nodes.SoftwareComponent] # Can host software components
+      admin_endpoint: # Generic endpoint for administration/management
+        type: tosca.capabilities.Endpoint.Admin
+      scalable:
+        type: tosca.capabilities.Scalable
+        properties:
+          min_instances: 1
+          max_instances: 1
+          default_instances: 1
+      network_link: # Capability to link to a network
+        type: tosca.capabilities.network.Linkable
+
+  FogServer:
+    derived_from: Compute
+    properties:
+      network_interfaces:
+        type: integer
+      storage_capacity:
+        type: string
+    capabilities:
+      os:
+        properties:
+          type: Linux
+      host:
+        properties:
+          supported_types: [tosca.nodes.SoftwareComponent]
+      scalable:
+        properties:
+          max_instances: 5 # Example scaling for fog servers based on workload
+    requirements:
+      - network_connection:
+          capability: tosca.capabilities.network.Linkable
+          node: tosca.nodes.network.Network # Requires a network connection
+
+  SensorHub:
+    derived_from: Compute
+    properties:
+      sensor_types:
+        type: list
+        entry_schema:
+          type: string
+        description: Types of sensors connected to the hub.
+      data_rate:
+        type: string
+        description: Data rate of sensor readings.
+    capabilities:
+      os:
+        properties:
+          type: Embedded # For IoT/sensor hubs
+      sensor_data_output: # Capability to provide raw sensor data
+        type: tosca.capabilities.Endpoint.Data
+        properties:
+          protocol: UDP # Example for sensor data streaming
+          port: 5000 # Example port
+          secure: false # Assuming initial unencrypted for raw sensor data
+      admin_endpoint:
+        type: tosca.capabilities.Endpoint.Admin
+        properties:
+          protocol: HTTP # For configuration/management
+          port: 80 # Example port
+    requirements:
+      - network_connection:
+          capability: tosca.capabilities.network.Linkable
+          node: tosca.nodes.network.Network
+
+  VRHeadset:
+    derived_from: Compute
+    properties:
+      vr_platform:
+        type: string
+        description: Virtual reality platform (e.g., Oculus Quest 2).
+      supported_sensors:
+        type: list
+        entry_schema:
+          type: string
+        description: Types of sensors supported by the VR headset.
+      rendering_engine:
+        type: string
+        description: Rendering engine used by the VR headset.
+    capabilities:
+      os:
+        properties:
+          type: Android # Common for standalone VR headsets
+      host:
+        type: tosca.capabilities.Container.Runtime
+        properties:
+          supported_types: [VRClient] # Can host the VR client application
+      p2p_endpoint: # Endpoint for direct P2P communication within the game
+        type: tosca.capabilities.Endpoint.Admin
+        properties:
+          protocol: UDP # For P2P game communication
+          port: 7000 # Example port
+          secure: false # Assuming initial unencrypted for performance
+      scalable:
+        properties:
+          min_instances: 1
+          max_instances: 10 # Multiple patients/therapists
+    requirements:
+      - network_access:
+          capability: tosca.capabilities.network.Linkable
+          node: tosca.nodes.network.Network
+
+  CloudServer:
+    derived_from: Compute
+    properties:
+      storage_type:
+        type: string
+        description: Type of storage used (e.g., Object Storage, Block Storage).
+      bandwidth:
+        type: string
+        description: Network bandwidth.
+    capabilities:
+      os:
+        properties:
+          type: Linux
+      host:
+        properties:
+          supported_types: [tosca.nodes.SoftwareComponent]
+      scalable:
+        properties:
+          max_instances: 2 # Example for cloud server scaling
+      data_center_placement:
+        type: tosca.capabilities.Placement
+        properties:
+          location: eu-west-1 # Example data center location
+    requirements:
+      - network_connection:
+          capability: tosca.capabilities.network.Linkable
+          node: tosca.nodes.network.Network
+
+  TherapistWorkstation:
+    derived_from: Compute
+    properties:
+      os_family:
+        type: string
+        description: Operating system family of the workstation.
+      cpu_frequency:
+        type: string
+        description: CPU frequency of the workstation.
+      mem_size:
+        type: string
+        description: Memory size of the workstation.
+      display_resolution:
+        type: string
+        description: Display resolution of the monitor.
+      input_devices:
+        type: list
+        entry_schema:
+          type: string
+        description: List of input devices (e.g., keyboard, mouse, monitor, microphone, camera).
+    capabilities:
+      os:
+        properties:
+          type: Windows # As per use case
+      host:
+        properties:
+          supported_types: [tosca.nodes.SoftwareComponent]
+      management_interface: # Endpoint for therapist application
+        type: tosca.capabilities.Endpoint.Admin
+        properties:
+          protocol: HTTP # For web-based therapist interface
+          port: 8080 # Example port
+          secure: true # Therapist interface should be secure
+    requirements:
+      - network_access:
+          capability: tosca.capabilities.network.Linkable
+          node: tosca.nodes.network.Network
+
+  # Software Component Node Types
+  SoftwareComponent:
+    derived_from: tosca.nodes.SoftwareComponent
+    requirements:
+      - host:
+          capability: tosca.capabilities.Container.Runtime
+          node: Compute
+          relationship: tosca.relationships.HostedOn
+
+  SensorDataProcessing:
+    derived_from: SoftwareComponent
+    properties:
+      data_format:
+        type: string
+        description: Format of the processed sensor data.
+    capabilities:
+      processed_data_output: # Provides processed sensor data
+        type: tosca.capabilities.Endpoint.Data
+        properties:
+          protocol: TCP
+          port: 5001 # Example port
+          secure: false # Data might be pre-processed before encryption
+    requirements:
+      - sensor_data_input:
+          capability: sensor_data_output # Requires raw sensor data from SensorHub
+          node: SensorHub
+          relationship: tosca.relationships.ConnectsTo
+      - compute_host:
+          capability: tosca.capabilities.Container.Runtime
+          node: FogServer # Typically hosted on a FogServer
+          relationship: tosca.relationships.HostedOn
+      - network_connectivity:
+          capability: tosca.capabilities.network.Linkable
+          node: tosca.nodes.network.Network
+
+  PartialGameServer:
+    derived_from: SoftwareComponent
+    properties:
+      physics_engine:
+        type: string
+        description: Physics engine used by the partial game server.
+    capabilities:
+      game_logic_provider: # Provides a subset of game logic
+        type: tosca.capabilities.Endpoint.Admin # Using Admin for game logic interaction
+        properties:
+          protocol: TCP
+          port: 9001 # Example port for game logic
+          secure: false # For performance
+    requirements:
+      - compute_host:
+          capability: tosca.capabilities.Container.Runtime
+          node: FogServer # Can be hosted on FogServer
+          relationship: tosca.relationships.HostedOn
+      - network_connectivity:
+          capability: tosca.capabilities.network.Linkable
+          node: tosca.nodes.network.Network
+      - central_game_state:
+          capability: game_state_provider
+          node: GameServer
+          relationship: tosca.relationships.ConnectsTo # Connects to central game server
+
+  GameServer:
+    derived_from: SoftwareComponent
+    properties:
+      network_protocol:
+        type: string
+        description: Network protocol used for game communication.
+    capabilities:
+      game_api_endpoint: # Main API endpoint for game clients
+        type: tosca.capabilities.Endpoint.Admin
+        properties:
+          protocol: TCP
+          port: 9000
+          secure: true # Game server communication should be secure
+      game_state_provider: # Provides central game state and synchronization
+        type: tosca.capabilities.Endpoint.Admin
+        properties:
+          protocol: TCP
+          port: 9002 # Internal port for state sharing
+          secure: true
+      scalable:
+        type: tosca.capabilities.Scalable
+        properties:
+          min_instances: 1
+          max_instances: 2 # Can scale to handle more users
+    requirements:
+      - compute_host:
+          capability: tosca.capabilities.Container.Runtime
+          node: CloudServer # Typically hosted on a CloudServer
+          relationship: tosca.relationships.HostedOn
+      - network_connectivity:
+          capability: tosca.capabilities.network.Linkable
+          node: tosca.nodes.network.Network
+      - data_persistence:
+          capability: tosca.capabilities.Attachment # For persistent storage
+          node: DataStorage
+          relationship: tosca.relationships.AttachesTo
+
+  DataStorage:
+    derived_from: SoftwareComponent
+    properties:
+      database_type:
+        type: string
+        description: Type of database used for data storage.
+    capabilities:
+      data_store:
+        type: tosca.capabilities.Storage
+        properties:
+          volume_type: database # Example storage capability
+          size: 1 TB # Example size
+          max_connections: 100 # Example connections
+      database_endpoint:
+        type: tosca.capabilities.Endpoint.Admin
+        properties:
+          protocol: TCP
+          port: 5432 # Default PostgreSQL port
+          secure: true # Database access should be secure
+    requirements:
+      - compute_host:
+          capability: tosca.capabilities.Container.Runtime
+          node: CloudServer
+          relationship: tosca.relationships.HostedOn
+
+  AnalyticsMonitoring:
+    derived_from: SoftwareComponent
+    properties:
+      analysis_tools:
+        type: list
+        entry_schema:
+          type: string
+        description: List of tools used for analytics and monitoring.
+    capabilities:
+      monitoring_data_output: # Provides monitoring data/reports
+        type: tosca.capabilities.Endpoint.Data
+        properties:
+          protocol: HTTP
+          port: 3000 # Example for a dashboard
+          secure: true
+    requirements:
+      - game_data_source:
+          capability: game_state_provider # Needs to consume data from GameServer
+          node: GameServer
+          relationship: tosca.relationships.ConnectsTo
+      - patient_data_source:
+          capability: data_store # Needs to consume data from DataStorage
+          node: DataStorage
+          relationship: tosca.relationships.ConnectsTo
+      - compute_host:
+          capability: tosca.capabilities.Container.Runtime
+          node: CloudServer
+          relationship: tosca.relationships.HostedOn
+
+  AILearningModules:
+    derived_from: SoftwareComponent
+    properties:
+      learning_algorithms:
+        type: list
+        entry_schema:
+          type: string
+        description: List of AI learning algorithms used.
+    capabilities:
+      trained_model_output: # Provides trained AI models
+        type: tosca.capabilities.Endpoint.Data
+        properties:
+          protocol: HTTP
+          port: 8000 # Example for model serving
+          secure: true
+    requirements:
+      - compute_host:
+          capability: tosca.capabilities.Container.Runtime
+          node: CloudServer # AI might need powerful compute
+          relationship: tosca.relationships.HostedOn
+      - training_data_source:
+          capability: data_store # Needs data from DataStorage for training
+          node: DataStorage
+          relationship: tosca.relationships.ConnectsTo
+      - processed_sensor_data_source: # Might also use processed sensor data
+          capability: processed_data_output
+          node: SensorDataProcessing
+          relationship: tosca.relationships.ConnectsTo
+
+  VRClient:
+    derived_from: SoftwareComponent
+    properties:
+      supported_input:
+        type: string
+        description: Supported input methods for the VR client.
+    capabilities:
+      client_app_runtime:
+        type: tosca.capabilities.Container.Runtime
+        description: Provides the VR application runtime.
+    requirements:
+      - headset_host:
+          capability: host
+          node: VRHeadset # Requires VRHeadset to run on
+          relationship: tosca.relationships.HostedOn
+      - local_game_logic:
+          capability: game_logic_provider
+          node: PartialGameServer # Connects to partial game server for local logic
+          relationship: tosca.relationships.ConnectsTo
+      - central_game_state_sync:
+          capability: game_api_endpoint
+          node: GameServer # Connects to central game server for state synchronization
+          relationship: tosca.relationships.ConnectsTo
+      - network_access:
+          capability: tosca.capabilities.network.Linkable
+          node: tosca.nodes.network.Network
+      - sensor_data_input:
+          capability: sensor_data_output # Needs sensor data from SensorHub
+          node: SensorHub
+          relationship: tosca.relationships.ConnectsTo
+      - p2p_communication: # For direct P2P with other VR clients
+          capability: p2p_endpoint
+          node: VRHeadset # Connects to other VRHeadsets' P2P endpoints
+          relationship: tosca.relationships.ConnectsTo
+
+  VALogic:
+    derived_from: SoftwareComponent
+    properties:
+      ai_framework:
+        type: string
+        description: AI framework used for Virtual Agent logic.
+    capabilities:
+      virtual_agent_behavior_output: # Provides the behavior logic for VAs
+        type: tosca.capabilities.Endpoint.Admin # Represents a control interface for VAs
+        properties:
+          protocol: REST # Example for controlling VA behavior
+          port: 8001
+          secure: true
+    requirements:
+      - compute_host:
+          capability: tosca.capabilities.Container.Runtime
+          node: [FogServer, CloudServer] # Can be hosted on Fog or Cloud
+          relationship: tosca.relationships.HostedOn
+      - ai_model_input:
+          capability: trained_model_output # Needs trained models from AILearningModules
+          node: AILearningModules
+          relationship: tosca.relationships.ConnectsTo
+      - game_state_interaction:
+          capability: game_state_provider
+          node: GameServer # Needs to interact with game state
+          relationship: tosca.relationships.ConnectsTo
+
+# Policies
+policies:
+  - latency_requirement:
+      type: tosca.policies.nfv.Latency
+      description: Policy to ensure low latency for real-time interaction (visual feedback < 50ms).
+      properties:
+        criteria:
+          - target: [VRClient, GameServer] # Target the interaction path
+            threshold: 50 ms
+            operator: less_than
+            metric: response_time
+      targets: [patient_vr_client_1, game_server_app] # Apply to specific instances
+
+  - scalability_policy:
+      type: tosca.policies.Scaling
+      description: Policy to scale components based on the number of active users.
+      properties:
+        min_instances: 1
+        max_instances: 10 # Supports up to 10 simultaneous users
+        increment: 1
+        cooldown: 5 min # Cooldown period for scaling operations
+      targets: [patient_vr_headset_1, patient_vr_client_1, partial_game_server_app, virtual_agent_logic] # Components that scale with users
+
+  - data_security_policy:
+      type: tosca.policies.Security
+      description: Policy to protect sensitive patient data with encryption.
+      properties:
+        encryption_algorithm: AES256
+        data_at_rest_encryption: true
+        data_in_transit_encryption: true
+        access_control: RBAC # Role-Based Access Control
+      targets: [patient_data_storage, sensor_data_processing_app, game_server_app] # Components handling sensitive data
+
+  - placement_policy_fog:
+      type: tosca.policies.Placement
+      description: Policy to place SensorDataProcessing and PartialGameServer on Fog servers for low latency.
+      properties:
+        affinity: host # Prefer co-location
+      targets: [sensor_data_processing_app, partial_game_server_app]
+      requirements:
+        - host_capability:
+            capability: host
+            node: myrtus_fog_server
+
+  - placement_policy_cloud:
+      type: tosca.policies.Placement
+      description: Policy to place central services (GameServer, DataStorage, Analytics, AI) on Cloud servers.
+      properties:
+        affinity: host
+      targets: [game_server_app, patient_data_storage, analytics_engine, ai_learning_modules]
+      requirements:
+        - host_capability:
+            capability: host
+            node: myrtus_cloud_server
+
+  - bandwidth_policy:
+      type: tosca.policies.nfv.Bandwidth
+      description: Policy to ensure minimum network bandwidth per player.
+      properties:
+        criteria:
+          - target: [myrtus_edge_network, myrtus_fog_network, myrtus_cloud_network]
+            threshold: 1 Mbps # Desired bandwidth per player
+            operator: greater_than_or_equal
+            metric: throughput
+      targets: [myrtus_edge_network, myrtus_fog_network, myrtus_cloud_network] # Apply to network resources
+
+  - performance_fps_policy:
+      type: tosca.policies.Performance
+      description: Policy to maintain acceptable frame rates for the VR experience.
+      properties:
+        criteria:
+          - target: [patient_vr_client_1]
+            threshold: 30 FPS # Minimum acceptable FPS
+            operator: greater_than_or_equal
+            metric: frame_rate
+      targets: [patient_vr_client_1]
+
+topology_template:
+  node_templates:
+    # Compute Nodes
+    myrtus_cloud_server:
+      type: CloudServer
+      properties:
+        cpu_frequency: "4.0 GHz"
+        num_cpus: 32
+        mem_size: "128 GB"
+        os_family: Linux
+        storage_capacity: "10 TB"
+        storage_type: Object Storage
+        bandwidth: "10 Gbps"
+      capabilities:
+        host:
+          properties:
+            num_cpus: { greater_than_or_equal: 32 }
+            mem_size: { greater_than_or_equal: "128 GB" }
+        network_link:
+          properties:
+            bandwidth: { greater_than_or_equal: "10 Gbps" }
+
+    myrtus_fog_server:
+      type: FogServer
+      properties:
+        cpu_frequency: "3.0 GHz"
+        num_cpus: 8
+        mem_size: "32 GB"
+        os_family: Linux
+        network_interfaces: 2
+        storage_capacity: "1 TB"
+      capabilities:
+        host:
+          properties:
+            num_cpus: { greater_than_or_equal: 8 }
+            mem_size: { greater_than_or_equal: "32 GB" }
+        network_link:
+          properties:
+            bandwidth: { greater_than_or_equal: "1 Gbps" } # Example for fog network
+
+    patient_vr_headset_1:
+      type: VRHeadset
+      properties:
+        cpu_frequency: "1.8 GHz"
+        num_cpus: 2
+        mem_size: "6 GB"
+        os_family: Android
+        vr_platform: Oculus Quest 2
+        supported_sensors: [IMU, Hand Tracking]
+        rendering_engine: Unity
+      capabilities:
+        host:
+          properties:
+            num_cpus: { greater_than_or_equal: 2 }
+            mem_size: { greater_than_or_equal: "6 GB" }
+
+    patient_sensor_hub_1:
+      type: SensorHub
+      properties:
+        cpu_frequency: "0.5 GHz"
+        num_cpus: 1
+        mem_size: "256 MB"
+        os_family: Embedded
+        sensor_types: [EMG, EEG]
+        data_rate: 100Hz
+      capabilities:
+        host:
+          properties:
+            num_cpus: { greater_than_or_equal: 1 }
+            mem_size: { greater_than_or_equal: "256 MB" }
+
+    therapist_workstation:
+      type: TherapistWorkstation
+      properties:
+        cpu_frequency: "3.0 GHz"
+        num_cpus: 4
+        mem_size: "16 GB"
+        os_family: Windows
+        display_resolution: "1920x1080"
+        input_devices: [keyboard, mouse, monitor, microphone, camera]
+      capabilities:
+        host:
+          properties:
+            num_cpus: { greater_than_or_equal: 4 }
+            mem_size: { greater_than_or_equal: "16 GB" }
+
+    # Software Components
+    game_server_app:
+      type: GameServer
+      properties:
+        network_protocol: TCP
+      requirements:
+        - compute_host:
+            node: myrtus_cloud_server
+        - network_connectivity:
+            node: myrtus_cloud_network
+        - data_persistence:
+            node: patient_data_storage
+
+    patient_data_storage:
+      type: DataStorage
+      properties:
+        database_type: PostgreSQL
+      requirements:
+        - compute_host:
+            node: myrtus_cloud_server
+
+    analytics_engine:
+      type: AnalyticsMonitoring
+      properties:
+        analysis_tools: [Grafana, ELKStack]
+      requirements:
+        - compute_host:
+            node: myrtus_cloud_server
+        - game_data_source:
+            node: game_server_app
+        - patient_data_source:
+            node: patient_data_storage
+
+    ai_learning_modules:
+      type: AILearningModules
+      properties:
+        learning_algorithms: [Reinforcement Learning, Supervised Learning]
+      requirements:
+        - compute_host:
+            node: myrtus_cloud_server
+        - training_data_source:
+            node: patient_data_storage
+        - processed_sensor_data_source:
+            node: sensor_data_processing_app
+
+    sensor_data_processing_app:
+      type: SensorDataProcessing
+      properties:
+        data_format: JSON
+      requirements:
+        - sensor_data_input:
+            node: patient_sensor_hub_1
+        - compute_host:
+            node: myrtus_fog_server
+        - network_connectivity:
+            node: myrtus_fog_network
+
+    partial_game_server_app:
+      type: PartialGameServer
+      properties:
+        physics_engine: PhysX
+      requirements:
+        - compute_host:
+            node: myrtus_fog_server
+        - network_connectivity:
+            node: myrtus_fog_network
+        - central_game_state:
+            node: game_server_app
+
+    patient_vr_client_1:
+      type: VRClient
+      properties:
+        supported_input: "Controller, Hand Tracking"
+      requirements:
+        - headset_host:
+            node: patient_vr_headset_1
+        - local_game_logic:
+            node: partial_game_server_app
+        - central_game_state_sync:
+            node: game_server_app
+        - network_access:
+            node: myrtus_edge_network
+        - sensor_data_input:
+            node: patient_sensor_hub_1
+        - p2p_communication:
+            node: patient_vr_headset_1 # Connects to other VRHeadsets' P2P endpoints
+
+    virtual_agent_logic:
+      type: VALogic
+      properties:
+        ai_framework: TensorFlow
+      requirements:
+        - compute_host:
+            node: myrtus_fog_server # Can also be hosted on cloud_server
+        - ai_model_input:
+            node: ai_learning_modules
+        - game_state_interaction:
+            node: game_server_app
+
+    # Network Resources
+    myrtus_cloud_network:
+      type: tosca.nodes.network.Network
+      properties:
+        network_name: cloud_net
+        ip_version: 4
+        cidr: "10.0.0.0/16" # Example CIDR
+
+    myrtus_fog_network:
+      type: tosca.nodes.network.Network
+      properties:
+        network_name: fog_net
+        ip_version: 4
+        cidr: "10.0.1.0/24" # Example CIDR
+
+    myrtus_edge_network:
+      type: tosca.nodes.network.Network
+      properties:
+        network_name: edge_net
+        ip_version: 4
+        cidr: "10.0.2.0/24" # Example CIDR
+
+  relationships:
+    # HostedOn relationships are implicitly defined by the 'host' requirement in SoftwareComponent
+    # Explicitly define other relationships for clarity and specific connections
+
+    - name: vr_headset_to_edge_network
+      type: tosca.relationships.ConnectsTo
+      source: patient_vr_headset_1
+      target: myrtus_edge_network
+      properties:
+        connection_type: wireless
+
+    - name: sensor_hub_to_edge_network
+      type: tosca.relationships.ConnectsTo
+      source: patient_sensor_hub_1
+      target: myrtus_edge_network
+      properties:
+        connection_type: wireless
+
+    - name: therapist_workstation_to_edge_network
+      type: tosca.relationships.ConnectsTo
+      source: therapist_workstation
+      target: myrtus_edge_network
+      properties:
+        connection_type: wired
+
+    - name: fog_server_to_fog_network
+      type: tosca.relationships.ConnectsTo
+      source: myrtus_fog_server
+      target: myrtus_fog_network
+      properties:
+        connection_type: wired
+
+    - name: cloud_server_to_cloud_network
+      type: tosca.relationships.ConnectsTo
+      source: myrtus_cloud_server
+      target: myrtus_cloud_network
+      properties:
+        connection_type: wired
+
+    - name: edge_to_fog_interconnect
+      type: tosca.relationships.ConnectsTo
+      source: myrtus_edge_network
+      target: myrtus_fog_network
+      properties:
+        connection_type: WAN # Wide Area Network
+
+    - name: fog_to_cloud_interconnect
+      type: tosca.relationships.ConnectsTo
+      source: myrtus_fog_network
+      target: myrtus_cloud_network
+      properties:
+        connection_type: WAN

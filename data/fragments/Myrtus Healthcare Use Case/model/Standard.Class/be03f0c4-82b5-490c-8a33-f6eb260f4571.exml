@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Requirements" version="4">
+  <OBJECT>
+    <ID name="Requirements" mc="Standard.Class" uid="be03f0c4-82b5-490c-8a33-f6eb260f4571"/>
+    <PID name="VRClient" mc="Standard.Class" uid="130eb713-6ea0-420b-89b5-a86fb7b5bcdf"/>
+    <ATTRIBUTES>
+      <ATT name="IsActive">false</ATT>
+      <ATT name="IsMain">false</ATT>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Requirements]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="host" mc="Standard.Class" uid="03c651e4-e164-4c7a-b533-60071334174b"/>
+        <COMPID name="local_game_logic" mc="Standard.Class" uid="c1fa6e01-e652-4a52-b94e-76fc42698e12"/>
+        <COMPID name="central_game_state_sync" mc="Standard.Class" uid="9d769220-aed4-4c4b-a6d0-3801d7b5e053"/>
+        <COMPID name="network_access" mc="Standard.Class" uid="8dca689d-6c22-4324-a519-f542958a2fdb"/>
+        <COMPID name="sensor_data_output" mc="Standard.Class" uid="73a4873d-fdb8-4b81-a423-6305996f962a"/>
+        <COMPID name="p2p_communication" mc="Standard.Class" uid="718f31ad-aab1-4883-86ef-6d7362c05e31"/>
+      </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="TRequirementDefinitionType" mc="Infrastructure.Stereotype" uid="622c76d1-f337-471e-984a-2af659417163"/>
+      </LINK>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

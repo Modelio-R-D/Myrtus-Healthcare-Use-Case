@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Capabilities" version="4">
+  <OBJECT>
+    <ID name="Capabilities" mc="Standard.Class" uid="408976ef-fc97-42c5-839c-61999621e0de"/>
+    <PID name="VRHeadset" mc="Standard.Class" uid="be269937-7faa-4219-9e5a-85f401dfee40"/>
+    <ATTRIBUTES>
+      <ATT name="IsActive">false</ATT>
+      <ATT name="IsMain">false</ATT>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Capabilities]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="os" mc="Standard.Class" uid="9511d62e-78ef-4a7f-a83e-ecf9bb35b69f"/>
+        <COMPID name="host" mc="Standard.Class" uid="463399fd-9017-440c-b405-92a3a8c6c26c"/>
+        <COMPID name="p2p_endpoint" mc="Standard.Class" uid="a4e8310d-3546-4b3b-9f4e-1a0b52750b91"/>
+        <COMPID name="scalable" mc="Standard.Class" uid="65e98a4a-ec6d-44e3-a3af-1e17b6199396"/>
+      </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="TCapabilityDefinitionsType" mc="Infrastructure.Stereotype" uid="ac0418b1-a726-46e6-ac59-310f0055050f"/>
+      </LINK>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

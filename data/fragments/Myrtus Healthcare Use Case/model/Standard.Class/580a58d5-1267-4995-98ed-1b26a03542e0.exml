@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Requirements" version="4">
+  <OBJECT>
+    <ID name="Requirements" mc="Standard.Class" uid="580a58d5-1267-4995-98ed-1b26a03542e0"/>
+    <PID name="VALogic" mc="Standard.Class" uid="9a7f69c9-c39f-4b78-a824-45e1cdce6c25"/>
+    <ATTRIBUTES>
+      <ATT name="IsActive">false</ATT>
+      <ATT name="IsMain">false</ATT>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Requirements]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="host" mc="Standard.Class" uid="a216d4a7-6e53-4877-8981-8eacfbed0e11"/>
+        <COMPID name="ai_model_input" mc="Standard.Class" uid="13484dd5-6006-4789-b42f-4ee4e3175f68"/>
+        <COMPID name="game_state_interaction" mc="Standard.Class" uid="87f2d3e4-a4e0-4a99-bf36-906135161034"/>
+      </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="TRequirementDefinitionType" mc="Infrastructure.Stereotype" uid="622c76d1-f337-471e-984a-2af659417163"/>
+      </LINK>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

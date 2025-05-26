@@ -14,14 +14,15 @@
     </ATTRIBUTES>
     <DEPENDENCIES>
       <COMP relation="OwnedElement">
-        <COMPID name="VRClient" mc="Standard.Class" uid="130eb713-6ea0-420b-89b5-a86fb7b5bcdf"/>
+        <COMPID name="MyrtoSoftwareComponent" mc="Standard.Class" uid="cd7e4ab3-bba3-416a-9b6f-d0e4d25610af"/>
         <COMPID name="SensorDataProcessing" mc="Standard.Class" uid="f98d4af3-02a1-44ae-88cb-9a2fd79667c1"/>
-        <COMPID name="VALogic" mc="Standard.Class" uid="9a7f69c9-c39f-4b78-a824-45e1cdce6c25"/>
         <COMPID name="PartialGameServer" mc="Standard.Class" uid="de0b8746-83cd-43ea-a360-61b0e933f2be"/>
         <COMPID name="GameServer" mc="Standard.Class" uid="3eeab459-c190-464d-988a-a0f828a1225d"/>
         <COMPID name="DataStorage" mc="Standard.Class" uid="e5fbc36b-e72f-448e-be9f-14d1a13d9927"/>
         <COMPID name="AnalyticsMonitoring" mc="Standard.Class" uid="73eed1d3-e1da-46a7-8c48-75d61eddcf21"/>
         <COMPID name="AILearningModules" mc="Standard.Class" uid="2ddec5dc-792a-4f31-b419-0513b62cc6e4"/>
+        <COMPID name="VRClient" mc="Standard.Class" uid="130eb713-6ea0-420b-89b5-a86fb7b5bcdf"/>
+        <COMPID name="VALogic" mc="Standard.Class" uid="9a7f69c9-c39f-4b78-a824-45e1cdce6c25"/>
       </COMP>
       <LINK relation="Extension">
         <FOREIGNID name="TGroup" mc="Infrastructure.Stereotype" uid="572d5cb4-54c7-45d0-a9c8-3dc3677f9ef3"/>

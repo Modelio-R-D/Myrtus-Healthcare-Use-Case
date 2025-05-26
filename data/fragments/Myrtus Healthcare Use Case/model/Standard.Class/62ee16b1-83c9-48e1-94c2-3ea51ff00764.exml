@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Capabilities" version="4">
+  <OBJECT>
+    <ID name="Capabilities" mc="Standard.Class" uid="62ee16b1-83c9-48e1-94c2-3ea51ff00764"/>
+    <PID name="VALogic" mc="Standard.Class" uid="9a7f69c9-c39f-4b78-a824-45e1cdce6c25"/>
+    <ATTRIBUTES>
+      <ATT name="IsActive">false</ATT>
+      <ATT name="IsMain">false</ATT>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Capabilities]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="virtual_agent_behavior_output" mc="Standard.Class" uid="d4a252e4-1f98-466c-8e1f-abe38c181c9d"/>
+      </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="TCapabilityDefinitionsType" mc="Infrastructure.Stereotype" uid="ac0418b1-a726-46e6-ac59-310f0055050f"/>
+      </LINK>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

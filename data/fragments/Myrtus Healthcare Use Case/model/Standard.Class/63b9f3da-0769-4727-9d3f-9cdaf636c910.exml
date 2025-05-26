@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="bandwidth_policy" version="4">
+  <OBJECT>
+    <ID name="bandwidth_policy" mc="Standard.Class" uid="63b9f3da-0769-4727-9d3f-9cdaf636c910"/>
+    <PID name="Policies" mc="Standard.Class" uid="0986b83c-5d5a-4c75-b921-aad0f4662f17"/>
+    <ATTRIBUTES>
+      <ATT name="IsActive">false</ATT>
+      <ATT name="IsMain">false</ATT>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[bandwidth_policy]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <LINK relation="Extension">
+        <FOREIGNID name="TPolicy" mc="Infrastructure.Stereotype" uid="afe2c9ed-9fab-4a53-a2d2-b52d849d0799"/>
+      </LINK>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

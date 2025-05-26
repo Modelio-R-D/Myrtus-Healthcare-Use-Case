@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Requirements" version="4">
+  <OBJECT>
+    <ID name="Requirements" mc="Standard.Class" uid="04854003-f45e-4b25-8b02-e52546012876"/>
+    <PID name="PartialGameServer" mc="Standard.Class" uid="de0b8746-83cd-43ea-a360-61b0e933f2be"/>
+    <ATTRIBUTES>
+      <ATT name="IsActive">false</ATT>
+      <ATT name="IsMain">false</ATT>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Requirements]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="host" mc="Standard.Class" uid="b0d728fa-8ca9-4fb4-9a9a-530cbda9f3d8"/>
+        <COMPID name="network_connectivity" mc="Standard.Class" uid="99cff55b-2ad2-463c-8388-58c4ca5953b2"/>
+        <COMPID name="central_game_state" mc="Standard.Class" uid="f91f4427-9ff4-4e26-b83f-971eb7bfe059"/>
+      </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="TRequirementDefinitionType" mc="Infrastructure.Stereotype" uid="622c76d1-f337-471e-984a-2af659417163"/>
+      </LINK>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

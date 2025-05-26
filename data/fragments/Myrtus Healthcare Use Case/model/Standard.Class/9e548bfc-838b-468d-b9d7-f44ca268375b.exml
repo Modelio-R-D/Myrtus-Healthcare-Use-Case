@@ -2,7 +2,7 @@
 <!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="FogServer" version="4">
   <OBJECT>
     <ID name="FogServer" mc="Standard.Class" uid="9e548bfc-838b-468d-b9d7-f44ca268375b"/>
-    <PID name="Compute nodes" mc="Standard.Package" uid="f5a69f69-e625-4c37-bfa4-ee66bb5802fe"/>
+    <PID name="Compute node types" mc="Standard.Package" uid="f5a69f69-e625-4c37-bfa4-ee66bb5802fe"/>
     <ATTRIBUTES>
       <ATT name="IsActive">false</ATT>
       <ATT name="IsMain">false</ATT>
@@ -27,7 +27,7 @@
             <ATT name="IsOrdered">false</ATT>
             <ATT name="IsUnique">false</ATT>
             <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
-            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[*]]></ATT>
             <ATT name="Visibility">Public</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
@@ -36,7 +36,7 @@
           </ATTRIBUTES>
           <DEPENDENCIES>
             <LINK relation="Type">
-              <FOREIGNID name="integer" mc="Standard.DataType" uid="00000004-0000-0009-0000-000000000000"/>
+              <FOREIGNID name="string" mc="Standard.DataType" uid="00000004-0000-000d-0000-000000000000"/>
             </LINK>
             <LINK relation="Extension">
               <FOREIGNID name="PropertyDefinitionType" mc="Infrastructure.Stereotype" uid="34943474-c962-4064-b5f1-c6008ebb3c9d"/>
@@ -71,26 +71,30 @@
           </DEPENDENCIES>
         </OBJECT>
       </COMP>
+      <COMP relation="OwnedElement">
+        <COMPID name="Capabilities" mc="Standard.Class" uid="4ce5dfad-da84-4dc1-8aab-289bfae5a33f"/>
+        <COMPID name="Requirements" mc="Standard.Class" uid="c5500f15-9f56-4952-8440-3ff6e953d544"/>
+      </COMP>
       <LINK relation="Extension">
         <FOREIGNID name="TNodeType" mc="Infrastructure.Stereotype" uid="47cdd09e-013d-4670-b757-f5736d2bb48c"/>
       </LINK>
       <COMP relation="DependsOnDependency">
         <OBJECT>
-          <ID name="derivedFrom" mc="Infrastructure.Dependency" uid="f818ff91-9d0e-49f0-82bc-35cd492849e2"/>
+          <ID name="derivedFrom" mc="Infrastructure.Dependency" uid="59f1da9b-ab5a-49b0-be3e-41de723a12ed"/>
           <ATTRIBUTES>
             <ATT name="Name"><![CDATA[derivedFrom]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
             <LINK relation="DependsOn">
-              <FOREIGNID name="Compute" mc="Standard.Class" uid="13f04cdb-48c8-46e4-9929-1def4720dfe9"/>
+              <ID name="MyrtoCompute" mc="Standard.Class" uid="c16f13df-55ee-4927-8526-3d6b5387bdbc"/>
             </LINK>
             <LINK relation="Extension">
               <FOREIGNID name="MDAAssocDep" mc="Infrastructure.Stereotype" uid="94b7efa5-f94c-4d1d-896f-f103e56a8e2e"/>
             </LINK>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="Infrastructure.TaggedValue" uid="29cc0f17-12cc-4cb5-9ce5-c55702fe4371"/>
+                <ID name="" mc="Infrastructure.TaggedValue" uid="08b1be12-7eb6-4f6c-bf42-42e61159d1e4"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
@@ -98,7 +102,7 @@
                 <DEPENDENCIES>
                   <COMP relation="Actual">
                     <OBJECT>
-                      <ID name="" mc="Infrastructure.TagParameter" uid="32fde6fb-7ebc-4b8e-ad5f-0a4cc97c28b6"/>
+                      <ID name="" mc="Infrastructure.TagParameter" uid="5be1f99c-a9b8-4a01-ac51-c503c3f3ddb0"/>
                       <ATTRIBUTES>
                         <ATT name="Value"><![CDATA[derivedFrom]]></ATT>
                         <ATT name="status">1970354901745664</ATT>

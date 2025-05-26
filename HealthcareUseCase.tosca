@@ -1,0 +1,229 @@
+tosca_definitions_version: tosca_simple_yaml_1.3
+
+node_types:
+  # Compute Nodes
+  tosca.nodes.Compute:
+    properties:
+      cpu_frequency: { type: string }
+      num_cpus: { type: integer }
+      disk_size: { type: string }
+      os_family: { type: string }
+      os_architecture: { type: string }
+      mem_size: { type: string }
+
+  # Custom Node Types
+  MyTypes.VRHeadset:
+    derived_from: tosca.nodes.Compute
+    properties:
+      vr_platform: { type: string }
+      supported_sensors: { type: list, entry_schema: string }
+      rendering_engine: { type: string }
+
+  MyTypes.SensorHub:
+    derived_from: tosca.nodes.Compute
+    properties:
+      sensor_types: { type: list, entry_schema: string }
+      data_rate: { type: string }
+
+  MyTypes.FogServer:
+    derived_from: tosca.nodes.Compute
+    properties:
+      network_interfaces: { type: integer }
+      storage_capacity: { type: string }
+
+  MyTypes.CloudServer:
+    derived_from: tosca.nodes.Compute
+    properties:
+      storage_type: { type: string }
+      bandwidth: { type: string }
+
+  # Software Nodes
+  MyTypes.VRClient:
+    derived_from: tosca.nodes.SoftwareComponent
+    properties:
+      # ... Specific VR Client properties ...
+      supported_input: { type: string }
+
+  MyTypes.SensorDataProcessing:
+    derived_from: tosca.nodes.SoftwareComponent
+    properties:
+      # ... Specific Sensor Data Processing properties ...
+      data_format: { type: string }
+
+  MyTypes.VALogic:
+    derived_from: tosca.nodes.SoftwareComponent
+    properties:
+      # ... Specific VA Logic properties ...
+      ai_framework: { type: string }
+
+  MyTypes.PartialGameServer:
+    derived_from: tosca.nodes.SoftwareComponent
+    properties:
+      # ... Specific Partial Game Server properties ...
+      physics_engine: { type: string }
+
+  MyTypes.GameServer:
+    derived_from: tosca.nodes.SoftwareComponent
+    properties:
+      # ... Specific Game Server properties ...
+      network_protocol: { type: string }
+
+  MyTypes.DataStorage:
+    derived_from: tosca.nodes.SoftwareComponent
+    properties:
+      # ... Specific Data Storage properties ...
+      database_type: { type: string }
+
+  MyTypes.AnalyticsMonitoring:
+    derived_from: tosca.nodes.SoftwareComponent
+    properties:
+      # ... Specific Analytics & Monitoring properties ...
+      analysis_tools: { type: list, entry_schema: string }
+
+  MyTypes.AILearningModules:
+    derived_from: tosca.nodes.SoftwareComponent
+    properties:
+      # ... Specific AI Learning Modules properties ...
+      learning_algorithms: { type: list, entry_schema: string }
+
+
+topology_template:
+  node_templates:
+    VRHeadset1:
+      type: MyTypes.VRHeadset
+      properties:
+        vr_platform: "Oculus Quest 2"
+        supported_sensors: ["IMU", "Hand Tracking"]
+        rendering_engine: "Unity"
+
+    SensorHub1:
+      type: MyTypes.SensorHub
+      properties:
+        sensor_types: ["EMG", "EEG"]
+        data_rate: "100Hz"
+
+    FogServer1:
+      type: MyTypes.FogServer
+      properties:
+        cpu_frequency: "3.0GHz"
+        num_cpus: 8
+        mem_size: "32GB"
+        os_family: "Linux"
+        network_interfaces: 2
+        storage_capacity: "1TB"
+
+    CloudServer1:
+      type: MyTypes.CloudServer
+      properties:
+        cpu_frequency: "4.0GHz"
+        num_cpus: 32
+        mem_size: "128GB"
+        os_family: "Linux"
+        storage_type: "Object Storage"
+        bandwidth: "10Gbps"
+
+    VRClient1:
+      type: MyTypes.VRClient
+      requirements:
+        - host:
+            node: VRHeadset1
+            capability: host
+            relationship: tosca.relationships.HostedOn
+        - connect_to:
+            node: PartialGameServer1
+            capability: game_logic
+            relationship: tosca.relationships.ConnectsTo
+
+    SensorDataProc1:
+      type: MyTypes.SensorDataProcessing
+      requirements:
+        - host:
+            node: FogServer1
+            capability: host
+            relationship: tosca.relationships.HostedOn
+        - connect_to:
+            node: SensorHub1
+            capability: sensor_data
+            relationship: tosca.relationships.ConnectsTo
+
+    VALogic1:
+      type: MyTypes.VALogic
+      requirements:
+        - host:
+            node: FogServer1
+            capability: host
+            relationship: tosca.relationships.HostedOn
+
+    PartialGameServer1:
+      type: MyTypes.PartialGameServer
+      requirements:
+        - host:
+            node: FogServer1
+            capability: host
+            relationship: tosca.relationships.HostedOn
+        - connect_to:
+            node: GameServer1
+            capability: game_logic
+            relationship: tosca.relationships.ConnectsTo
+
+    GameServer1:
+      type: MyTypes.GameServer
+      requirements:
+        - host:
+            node: CloudServer1
+            capability: host
+            relationship: tosca.relationships.HostedOn
+
+    DataStorage1:
+      type: MyTypes.DataStorage
+      requirements:
+        - host:
+            node: CloudServer1
+            capability: host
+            relationship: tosca.relationships.HostedOn
+
+    Analytics1:
+      type: MyTypes.AnalyticsMonitoring
+      requirements:
+        - host:
+            node: CloudServer1
+            capability: host
+            relationship: tosca.relationships.HostedOn
+
+    AILearning1:
+      type: MyTypes.AILearningModules
+      requirements:
+        - host:
+            node: CloudServer1
+            capability: host
+            relationship: tosca.relationships.HostedOn
+
+
+groups:
+  edge_group:
+    type: tosca.groups.Generic
+    members: [ VRHeadset1, SensorHub1 ]
+
+  fog_group:
+    type: tosca.groups.Generic
+    members: [ FogServer1, VRClient1, SensorDataProc1, VALogic1, PartialGameServer1 ]
+
+  cloud_group:
+    type: tosca.groups.Generic
+    members: [ CloudServer1, GameServer1, DataStorage1, Analytics1, AILearning1 ]
+
+policies:
+  latency_policy:
+    type: tosca.policies.Placement
+    targets: [ edge_group, fog_group ]
+    properties:
+      max_latency: 20ms
+
+  scaling_policy:
+    type: tosca.policies.Scaling
+    targets: [ GameServer1, VALogic1 ]
+    properties:
+      min_instances: 1
+      max_instances: 10
+      scale_out_threshold: 80%
+      scale_in_threshold: 20%

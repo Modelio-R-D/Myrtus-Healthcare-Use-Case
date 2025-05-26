@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Tosca="http:///schemas/Tosca/_ZBDEoDcqEfCGssOVWCcVrQ/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mda="http:///schemas/mda/_ZBFg4DcqEfCGssOVWCcVrQ/0" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http:///schemas/Tosca/_ZBDEoDcqEfCGssOVWCcVrQ/0 Tosca.profile.xmi#_ZBH9JzcqEfCGssOVWCcVrQ http:///schemas/mda/_ZBFg4DcqEfCGssOVWCcVrQ/0 mda.profile.xmi#_ZBcGNzcqEfCGssOVWCcVrQ">
+  <uml:Model xmi:id="_ZA-MIDcqEfCGssOVWCcVrQ" name="Tosca model">
+    <eAnnotations xmi:id="_ZA-MITcqEfCGssOVWCcVrQ" source="Objing">
+      <contents xmi:type="uml:Property" xmi:id="_ZA-MIjcqEfCGssOVWCcVrQ" name="exporterVersion">
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_ZA-MIzcqEfCGssOVWCcVrQ" value="3.0.0"/>
+      </contents>
+    </eAnnotations>
+    <packagedElement xmi:type="uml:Package" xmi:id="_ZA-MJDcqEfCGssOVWCcVrQ" name="Service Template">
+      <packagedElement xmi:type="uml:Package" xmi:id="_ZA-MJTcqEfCGssOVWCcVrQ" name="Node templates">
+        <packagedElement xmi:type="uml:Package" xmi:id="_ZA-MJjcqEfCGssOVWCcVrQ" name="Edge Group">
+          <packagedElement xmi:type="uml:Class" xmi:id="_ZA-MJzcqEfCGssOVWCcVrQ" name="VRHeadset1" clientDependency="_ZA-MMDcqEfCGssOVWCcVrQ">
+            <ownedAttribute xmi:id="_ZA-MKDcqEfCGssOVWCcVrQ" name="vr_platform" visibility="public" isUnique="false">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_ZA-MKTcqEfCGssOVWCcVrQ" value="&quot;Oculus Quest 2&quot;"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_ZA-MKjcqEfCGssOVWCcVrQ" name="supported_sensors" visibility="public" isUnique="false">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZA-MKzcqEfCGssOVWCcVrQ" value="*"/>
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_ZA-MLDcqEfCGssOVWCcVrQ" value="[&quot;IMU&quot;, &quot;Hand Tracking&quot;]"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_ZA-MLTcqEfCGssOVWCcVrQ" name="rendering_engine" visibility="public" isUnique="false">
+              <ownedComment xmi:id="_ZA-MLjcqEfCGssOVWCcVrQ">
+                <body>&lt;Saisir le texte de la note ici></body>
+              </ownedComment>
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_ZA-MLzcqEfCGssOVWCcVrQ" value="Unity"/>
+            </ownedAttribute>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Dependency" xmi:id="_ZA-MMDcqEfCGssOVWCcVrQ" name="nodeType" supplier="_ZA-MoDcqEfCGssOVWCcVrQ" client="_ZA-MJzcqEfCGssOVWCcVrQ"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_ZA-MMTcqEfCGssOVWCcVrQ" name="VRHeadset2" clientDependency="_ZA-MOjcqEfCGssOVWCcVrQ">
+            <ownedAttribute xmi:id="_ZA-MMjcqEfCGssOVWCcVrQ" name="vr_platform" visibility="public" isUnique="false">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_ZA-MMzcqEfCGssOVWCcVrQ" value="&quot;Oculus Quest 2&quot;"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_ZA-MNDcqEfCGssOVWCcVrQ" name="supported_sensors" visibility="public" isUnique="false">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZA-MNTcqEfCGssOVWCcVrQ" value="*"/>
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_ZA-MNjcqEfCGssOVWCcVrQ" value="[&quot;IMU&quot;, &quot;Hand Tracking&quot;]"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_ZA-MNzcqEfCGssOVWCcVrQ" name="rendering_engine" visibility="public" isUnique="false">
+              <ownedComment xmi:id="_ZA-MODcqEfCGssOVWCcVrQ">
+                <body>&lt;Saisir le texte de la note ici></body>
+              </ownedComment>
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_ZA-MOTcqEfCGssOVWCcVrQ" value="Unity"/>
+            </ownedAttribute>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Dependency" xmi:id="_ZA-MOjcqEfCGssOVWCcVrQ" name="nodeType" supplier="_ZA-MoDcqEfCGssOVWCcVrQ" client="_ZA-MMTcqEfCGssOVWCcVrQ"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_ZA-MOzcqEfCGssOVWCcVrQ" name="VRHeadset3" clientDependency="_ZA-MRDcqEfCGssOVWCcVrQ">
+            <ownedAttribute xmi:id="_ZA-MPDcqEfCGssOVWCcVrQ" name="vr_platform" visibility="public" isUnique="false">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_ZA-MPTcqEfCGssOVWCcVrQ" value="&quot;Oculus Quest 2&quot;"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_ZA-MPjcqEfCGssOVWCcVrQ" name="supported_sensors" visibility="public" isUnique="false">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZA-MPzcqEfCGssOVWCcVrQ" value="*"/>
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_ZA-MQDcqEfCGssOVWCcVrQ" value="[&quot;IMU&quot;, &quot;Hand Tracking&quot;]"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_ZA-MQTcqEfCGssOVWCcVrQ" name="rendering_engine" visibility="public" isUnique="false">
+              <ownedComment xmi:id="_ZA-MQjcqEfCGssOVWCcVrQ">
+                <body>&lt;Saisir le texte de la note ici></body>
+              </ownedComment>
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_ZA-MQzcqEfCGssOVWCcVrQ" value="Unity"/>
+            </ownedAttribute>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Dependency" xmi:id="_ZA-MRDcqEfCGssOVWCcVrQ" name="nodeType" supplier="_ZA-MoDcqEfCGssOVWCcVrQ" client="_ZA-MOzcqEfCGssOVWCcVrQ"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_ZA-MRTcqEfCGssOVWCcVrQ" name="VRHeadset4" clientDependency="_ZA-MTjcqEfCGssOVWCcVrQ">
+            <ownedAttribute xmi:id="_ZA-MRjcqEfCGssOVWCcVrQ" name="vr_platform" visibility="public" isUnique="false">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_ZA-MRzcqEfCGssOVWCcVrQ" value="&quot;Oculus Quest 2&quot;"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_ZA-MSDcqEfCGssOVWCcVrQ" name="supported_sensors" visibility="public" isUnique="false">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZA-MSTcqEfCGssOVWCcVrQ" value="*"/>
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_ZA-MSjcqEfCGssOVWCcVrQ" value="[&quot;IMU&quot;, &quot;Hand Tracking&quot;]"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_ZA-MSzcqEfCGssOVWCcVrQ" name="rendering_engine" visibility="public" isUnique="false">
+              <ownedComment xmi:id="_ZA-MTDcqEfCGssOVWCcVrQ">
+                <body>&lt;Saisir le texte de la note ici></body>
+              </ownedComment>
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_ZA-MTTcqEfCGssOVWCcVrQ" value="Unity"/>
+            </ownedAttribute>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Dependency" xmi:id="_ZA-MTjcqEfCGssOVWCcVrQ" name="nodeType" supplier="_ZA-MoDcqEfCGssOVWCcVrQ" client="_ZA-MRTcqEfCGssOVWCcVrQ"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_ZA-MTzcqEfCGssOVWCcVrQ" name="SensorHub1 " clientDependency="_ZA-MVTcqEfCGssOVWCcVrQ">
+            <ownedAttribute xmi:id="_ZA-MUDcqEfCGssOVWCcVrQ" name="sensor_types" visibility="public" isUnique="false">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZA-MUTcqEfCGssOVWCcVrQ" value="*"/>
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_ZA-MUjcqEfCGssOVWCcVrQ" value="[&quot;EMG&quot;, &quot;EEG&quot;]"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_ZA-MUzcqEfCGssOVWCcVrQ" name="data_rate" visibility="public" isUnique="false">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_ZA-MVDcqEfCGssOVWCcVrQ" value="100Hz"/>
+            </ownedAttribute>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Dependency" xmi:id="_ZA-MVTcqEfCGssOVWCcVrQ" name="nodeType" supplier="_ZA-MmjcqEfCGssOVWCcVrQ" client="_ZA-MTzcqEfCGssOVWCcVrQ"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_ZA-MVjcqEfCGssOVWCcVrQ" name="SensorHub2" clientDependency="_ZA-MXDcqEfCGssOVWCcVrQ">
+            <ownedAttribute xmi:id="_ZA-MVzcqEfCGssOVWCcVrQ" name="sensor_types" visibility="public" isUnique="false">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZA-MWDcqEfCGssOVWCcVrQ" value="*"/>
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_ZA-MWTcqEfCGssOVWCcVrQ" value="[&quot;EMG&quot;, &quot;EEG&quot;]"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_ZA-MWjcqEfCGssOVWCcVrQ" name="data_rate" visibility="public" isUnique="false">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_ZA-MWzcqEfCGssOVWCcVrQ" value="100Hz"/>
+            </ownedAttribute>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Dependency" xmi:id="_ZA-MXDcqEfCGssOVWCcVrQ" name="nodeType" supplier="_ZA-MmjcqEfCGssOVWCcVrQ" client="_ZA-MVjcqEfCGssOVWCcVrQ"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_ZA-MXTcqEfCGssOVWCcVrQ" name="SensorHub3" clientDependency="_ZA-MYzcqEfCGssOVWCcVrQ">
+            <ownedAttribute xmi:id="_ZA-MXjcqEfCGssOVWCcVrQ" name="sensor_types" visibility="public" isUnique="false">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZA-MXzcqEfCGssOVWCcVrQ" value="*"/>
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_ZA-MYDcqEfCGssOVWCcVrQ" value="[&quot;EMG&quot;, &quot;EEG&quot;]"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_ZA-MYTcqEfCGssOVWCcVrQ" name="data_rate" visibility="public" isUnique="false">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_ZA-MYjcqEfCGssOVWCcVrQ" value="100Hz"/>
+            </ownedAttribute>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Dependency" xmi:id="_ZA-MYzcqEfCGssOVWCcVrQ" name="nodeType" supplier="_ZA-MmjcqEfCGssOVWCcVrQ" client="_ZA-MXTcqEfCGssOVWCcVrQ"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_ZA-MZDcqEfCGssOVWCcVrQ" name="SensorHub4" clientDependency="_ZA-MajcqEfCGssOVWCcVrQ">
+            <ownedAttribute xmi:id="_ZA-MZTcqEfCGssOVWCcVrQ" name="sensor_types" visibility="public" isUnique="false">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZA-MZjcqEfCGssOVWCcVrQ" value="*"/>
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_ZA-MZzcqEfCGssOVWCcVrQ" value="[&quot;EMG&quot;, &quot;EEG&quot;]"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_ZA-MaDcqEfCGssOVWCcVrQ" name="data_rate" visibility="public" isUnique="false">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_ZA-MaTcqEfCGssOVWCcVrQ" value="100Hz"/>
+            </ownedAttribute>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Dependency" xmi:id="_ZA-MajcqEfCGssOVWCcVrQ" name="nodeType" supplier="_ZA-MmjcqEfCGssOVWCcVrQ" client="_ZA-MZDcqEfCGssOVWCcVrQ"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_ZA-MazcqEfCGssOVWCcVrQ" name="Fog Group">
+          <packagedElement xmi:type="uml:Class" xmi:id="_ZA-MbDcqEfCGssOVWCcVrQ" name="SensorDataProc1" clientDependency="_ZA-MbTcqEfCGssOVWCcVrQ"/>
+          <packagedElement xmi:type="uml:Dependency" xmi:id="_ZA-MbTcqEfCGssOVWCcVrQ" name="nodeType" supplier="_ZA-zNDcqEfCGssOVWCcVrQ" client="_ZA-MbDcqEfCGssOVWCcVrQ"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_ZA-MbjcqEfCGssOVWCcVrQ" name="PartialGameServer1" clientDependency="_ZA-MbzcqEfCGssOVWCcVrQ"/>
+          <packagedElement xmi:type="uml:Dependency" xmi:id="_ZA-MbzcqEfCGssOVWCcVrQ" name="nodeType" supplier="_ZA-zNjcqEfCGssOVWCcVrQ" client="_ZA-MbjcqEfCGssOVWCcVrQ"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_ZA-McDcqEfCGssOVWCcVrQ" name="FogServer1" clientDependency="_ZA-MfTcqEfCGssOVWCcVrQ">
+            <ownedAttribute xmi:id="_ZA-McTcqEfCGssOVWCcVrQ" name="cpu_frequency" visibility="public" isUnique="false">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_ZA-McjcqEfCGssOVWCcVrQ" value="3.0GHz"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_ZA-MczcqEfCGssOVWCcVrQ" name="num_cpus" visibility="public" isUnique="false">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+              <defaultValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZA-MdDcqEfCGssOVWCcVrQ" value="8"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_ZA-MdTcqEfCGssOVWCcVrQ" name="mem_size" visibility="public" isUnique="false">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_ZA-MdjcqEfCGssOVWCcVrQ" value="32GB"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_ZA-MdzcqEfCGssOVWCcVrQ" name="os_family" visibility="public" isUnique="false">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_ZA-MeDcqEfCGssOVWCcVrQ" value="Linux"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_ZA-MeTcqEfCGssOVWCcVrQ" name="network_interfaces" visibility="public" isUnique="false">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+              <defaultValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZA-MejcqEfCGssOVWCcVrQ" value="2"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_ZA-MezcqEfCGssOVWCcVrQ" name="storage_capacity" visibility="public" isUnique="false">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_ZA-MfDcqEfCGssOVWCcVrQ" value="1TB"/>
+            </ownedAttribute>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Dependency" xmi:id="_ZA-MfTcqEfCGssOVWCcVrQ" name="nodeType" supplier="_ZA-MlzcqEfCGssOVWCcVrQ" client="_ZA-McDcqEfCGssOVWCcVrQ"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_ZA-MfjcqEfCGssOVWCcVrQ" name="Cloud Group">
+          <packagedElement xmi:type="uml:Class" xmi:id="_ZA-MfzcqEfCGssOVWCcVrQ" name="CloudServer1" clientDependency="_ZA-MjDcqEfCGssOVWCcVrQ">
+            <ownedAttribute xmi:id="_ZA-MgDcqEfCGssOVWCcVrQ" name="cpu_frequency" visibility="public" isUnique="false">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_ZA-MgTcqEfCGssOVWCcVrQ" value="4.0GHz"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_ZA-MgjcqEfCGssOVWCcVrQ" name="num_cpus" visibility="public" isUnique="false">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+              <defaultValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZA-MgzcqEfCGssOVWCcVrQ" value="32"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_ZA-MhDcqEfCGssOVWCcVrQ" name="mem_size" visibility="public" isUnique="false">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_ZA-MhTcqEfCGssOVWCcVrQ" value="128GB"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_ZA-MhjcqEfCGssOVWCcVrQ" name="os_family" visibility="public" isUnique="false">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_ZA-MhzcqEfCGssOVWCcVrQ" value="Linux"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_ZA-MiDcqEfCGssOVWCcVrQ" name="storage_type" visibility="public" isUnique="false">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_ZA-MiTcqEfCGssOVWCcVrQ" value="Object Storage"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_ZA-MijcqEfCGssOVWCcVrQ" name="bandwidth" visibility="public" isUnique="false">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_ZA-MizcqEfCGssOVWCcVrQ" value="10Gbps"/>
+            </ownedAttribute>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Dependency" xmi:id="_ZA-MjDcqEfCGssOVWCcVrQ" name="nodeType" supplier="_ZA-zMDcqEfCGssOVWCcVrQ" client="_ZA-MfzcqEfCGssOVWCcVrQ"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_ZA-MjTcqEfCGssOVWCcVrQ" name="GameServer1" clientDependency="_ZA-MjjcqEfCGssOVWCcVrQ"/>
+          <packagedElement xmi:type="uml:Dependency" xmi:id="_ZA-MjjcqEfCGssOVWCcVrQ" name="nodeType" supplier="_ZA-zOjcqEfCGssOVWCcVrQ" client="_ZA-MjTcqEfCGssOVWCcVrQ"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_ZA-MjzcqEfCGssOVWCcVrQ" name="DataStorage1" clientDependency="_ZA-MkDcqEfCGssOVWCcVrQ"/>
+          <packagedElement xmi:type="uml:Dependency" xmi:id="_ZA-MkDcqEfCGssOVWCcVrQ" name="nodeType" supplier="_ZA-zPDcqEfCGssOVWCcVrQ" client="_ZA-MjzcqEfCGssOVWCcVrQ"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_ZA-MkTcqEfCGssOVWCcVrQ" name="Analytics1" clientDependency="_ZA-MkjcqEfCGssOVWCcVrQ"/>
+          <packagedElement xmi:type="uml:Dependency" xmi:id="_ZA-MkjcqEfCGssOVWCcVrQ" name="nodeType" supplier="_ZA-zPjcqEfCGssOVWCcVrQ" client="_ZA-MkTcqEfCGssOVWCcVrQ"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_ZA-MkzcqEfCGssOVWCcVrQ" name="AILearning1 " clientDependency="_ZA-MlDcqEfCGssOVWCcVrQ"/>
+          <packagedElement xmi:type="uml:Dependency" xmi:id="_ZA-MlDcqEfCGssOVWCcVrQ" name="nodeType" supplier="_ZA-zQTcqEfCGssOVWCcVrQ" client="_ZA-MkzcqEfCGssOVWCcVrQ"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_ZA-MlTcqEfCGssOVWCcVrQ" name="Node types">
+        <packagedElement xmi:type="uml:Package" xmi:id="_ZA-MljcqEfCGssOVWCcVrQ" name="Compute node types">
+          <packagedElement xmi:type="uml:Class" xmi:id="_ZA-MlzcqEfCGssOVWCcVrQ" name="FogServer">
+            <ownedAttribute xmi:id="_ZA-MmDcqEfCGssOVWCcVrQ" name="network_interfaces" visibility="public" isUnique="false">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_ZA-MmTcqEfCGssOVWCcVrQ" name="storage_capacity" visibility="public" isUnique="false"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_ZA-MmjcqEfCGssOVWCcVrQ" name="SensorHub">
+            <ownedAttribute xmi:id="_ZA-MmzcqEfCGssOVWCcVrQ" name="sensor_types" visibility="public" isUnique="false">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZA-MnDcqEfCGssOVWCcVrQ" value="*"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_ZA-MnTcqEfCGssOVWCcVrQ" name="data_rate" visibility="public" isUnique="false"/>
+            <nestedClassifier xmi:type="uml:Class" xmi:id="_ZA-MnjcqEfCGssOVWCcVrQ" name="Capabilities">
+              <nestedClassifier xmi:type="uml:Class" xmi:id="_ZA-MnzcqEfCGssOVWCcVrQ" name="sensor_data"/>
+            </nestedClassifier>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_ZA-MoDcqEfCGssOVWCcVrQ" name="VRHeadset">
+            <ownedAttribute xmi:id="_ZA-MoTcqEfCGssOVWCcVrQ" name="vr_platform" visibility="public" isUnique="false">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_ZA-MojcqEfCGssOVWCcVrQ" name="supported_sensors" visibility="public" isUnique="false">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZA-MozcqEfCGssOVWCcVrQ" value="*"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_ZA-MpDcqEfCGssOVWCcVrQ" name="rendering_engine" visibility="public" isUnique="false">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_ZA-zMDcqEfCGssOVWCcVrQ" name="CloudServer">
+            <ownedAttribute xmi:id="_ZA-zMTcqEfCGssOVWCcVrQ" name="storage_type" visibility="public" isUnique="false">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_ZA-zMjcqEfCGssOVWCcVrQ" name="bandwidth" visibility="public" isUnique="false"/>
+          </packagedElement>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_ZA-zMzcqEfCGssOVWCcVrQ" name="Software Component node types">
+          <packagedElement xmi:type="uml:Class" xmi:id="_ZA-zNDcqEfCGssOVWCcVrQ" name="SensorDataProcessing">
+            <ownedAttribute xmi:id="_ZA-zNTcqEfCGssOVWCcVrQ" name="data_format" visibility="public" isUnique="false">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_ZA-zNjcqEfCGssOVWCcVrQ" name="PartialGameServer">
+            <ownedAttribute xmi:id="_ZA-zNzcqEfCGssOVWCcVrQ" name="physics_engine" visibility="public" isUnique="false">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <nestedClassifier xmi:type="uml:Class" xmi:id="_ZA-zODcqEfCGssOVWCcVrQ" name="Capabilities">
+              <nestedClassifier xmi:type="uml:Class" xmi:id="_ZA-zOTcqEfCGssOVWCcVrQ" name="game_logic"/>
+            </nestedClassifier>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_ZA-zOjcqEfCGssOVWCcVrQ" name="GameServer">
+            <ownedAttribute xmi:id="_ZA-zOzcqEfCGssOVWCcVrQ" name="network_protocol" visibility="public" isUnique="false">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_ZA-zPDcqEfCGssOVWCcVrQ" name="DataStorage">
+            <ownedAttribute xmi:id="_ZA-zPTcqEfCGssOVWCcVrQ" name="database_type" visibility="public" isUnique="false">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_ZA-zPjcqEfCGssOVWCcVrQ" name="AnalyticsMonitoring">
+            <ownedAttribute xmi:id="_ZA-zPzcqEfCGssOVWCcVrQ" name="analysis_tools" visibility="public" isUnique="false">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZA-zQDcqEfCGssOVWCcVrQ" value="*"/>
+            </ownedAttribute>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_ZA-zQTcqEfCGssOVWCcVrQ" name="AILearningModules">
+            <ownedAttribute xmi:id="_ZA-zQjcqEfCGssOVWCcVrQ" name="learning_algorithms" visibility="public" isUnique="false">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZA-zQzcqEfCGssOVWCcVrQ" value="*"/>
+            </ownedAttribute>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_ZA-zRDcqEfCGssOVWCcVrQ" name="VRClient">
+            <ownedAttribute xmi:id="_ZA-zRTcqEfCGssOVWCcVrQ" name="supported_input" visibility="public" isUnique="false">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <nestedClassifier xmi:type="uml:Class" xmi:id="_ZA-zRjcqEfCGssOVWCcVrQ" name="Requirements_NodeType">
+              <nestedClassifier xmi:type="uml:Class" xmi:id="_ZA-zRzcqEfCGssOVWCcVrQ" name="game_logic" clientDependency="_ZA-zSDcqEfCGssOVWCcVrQ"/>
+            </nestedClassifier>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Dependency" xmi:id="_ZA-zSDcqEfCGssOVWCcVrQ" name="nodeType" supplier="_ZA-zSTcqEfCGssOVWCcVrQ" client="_ZA-zRzcqEfCGssOVWCcVrQ"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_ZA-zSTcqEfCGssOVWCcVrQ" name="VALogic">
+            <ownedAttribute xmi:id="_ZA-zSjcqEfCGssOVWCcVrQ" name="ai_framework" visibility="public" isUnique="false">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_ZA-zSzcqEfCGssOVWCcVrQ" name="VRClient1" clientDependency="_ZA-zUDcqEfCGssOVWCcVrQ">
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_ZA-zTDcqEfCGssOVWCcVrQ" name="Requirements">
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_ZA-zTTcqEfCGssOVWCcVrQ" name="host" clientDependency="_ZA-zUTcqEfCGssOVWCcVrQ"/>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_ZA-zTjcqEfCGssOVWCcVrQ" name="connect_to" clientDependency="_ZA-zUjcqEfCGssOVWCcVrQ _ZA-zUzcqEfCGssOVWCcVrQ"/>
+        </nestedClassifier>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_ZA-zTzcqEfCGssOVWCcVrQ" name="Capability"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_ZA-zUDcqEfCGssOVWCcVrQ" name="nodeType" supplier="_ZA-zRDcqEfCGssOVWCcVrQ" client="_ZA-zSzcqEfCGssOVWCcVrQ"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_ZA-zUTcqEfCGssOVWCcVrQ" name="node" supplier="_ZA-MJzcqEfCGssOVWCcVrQ" client="_ZA-zTTcqEfCGssOVWCcVrQ"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_ZA-zUjcqEfCGssOVWCcVrQ" name="node" supplier="_ZA-MbjcqEfCGssOVWCcVrQ" client="_ZA-zTjcqEfCGssOVWCcVrQ"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_ZA-zUzcqEfCGssOVWCcVrQ" name="capability" supplier="_ZA-zOTcqEfCGssOVWCcVrQ" client="_ZA-zTjcqEfCGssOVWCcVrQ"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_ZA-zVDcqEfCGssOVWCcVrQ" name="VALogic1" clientDependency="_ZA-zVTcqEfCGssOVWCcVrQ"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_ZA-zVTcqEfCGssOVWCcVrQ" name="nodeType" supplier="_ZA-zSTcqEfCGssOVWCcVrQ" client="_ZA-zVDcqEfCGssOVWCcVrQ"/>
+    </packagedElement>
+    <profileApplication xmi:id="_ZBd7YDcqEfCGssOVWCcVrQ">
+      <eAnnotations xmi:id="_ZBd7YTcqEfCGssOVWCcVrQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="Tosca.profile.xmi#_ZBH9JzcqEfCGssOVWCcVrQ"/>
+      </eAnnotations>
+      <appliedProfile href="Tosca.profile.xmi#_ZBH9IDcqEfCGssOVWCcVrQ"/>
+    </profileApplication>
+    <profileApplication xmi:id="_ZBd7YjcqEfCGssOVWCcVrQ">
+      <eAnnotations xmi:id="_ZBd7YzcqEfCGssOVWCcVrQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="mda.profile.xmi#_ZBcGNzcqEfCGssOVWCcVrQ"/>
+      </eAnnotations>
+      <appliedProfile href="mda.profile.xmi#_ZBcGMDcqEfCGssOVWCcVrQ"/>
+    </profileApplication>
+  </uml:Model>
+  <Tosca:ToscaModel xmi:id="_ZBeicDcqEfCGssOVWCcVrQ" base_Package="_ZA-MIDcqEfCGssOVWCcVrQ"/>
+  <Tosca:TServiceTemplate xmi:id="_ZBeicTcqEfCGssOVWCcVrQ" base_Package="_ZA-MJDcqEfCGssOVWCcVrQ"/>
+  <Tosca:TNodeTemplate xmi:id="_ZBeicjcqEfCGssOVWCcVrQ" base_Class="_ZA-MJzcqEfCGssOVWCcVrQ"/>
+  <mda:MDAAssocDep xmi:id="_ZBeiczcqEfCGssOVWCcVrQ" base_Dependency="_ZA-MMDcqEfCGssOVWCcVrQ" role="nodeType"/>
+  <Tosca:TPropertyDef xmi:id="_ZBeidDcqEfCGssOVWCcVrQ" base_Property="_ZA-MKDcqEfCGssOVWCcVrQ"/>
+  <Tosca:TPropertyDef xmi:id="_ZBeidTcqEfCGssOVWCcVrQ" base_Property="_ZA-MKjcqEfCGssOVWCcVrQ"/>
+  <Tosca:TPropertyDef xmi:id="_ZBeidjcqEfCGssOVWCcVrQ" base_Property="_ZA-MLTcqEfCGssOVWCcVrQ"/>
+  <Tosca:TNodeTemplate xmi:id="_ZBeidzcqEfCGssOVWCcVrQ" base_Class="_ZA-MMTcqEfCGssOVWCcVrQ"/>
+  <mda:MDAAssocDep xmi:id="_ZBeieDcqEfCGssOVWCcVrQ" base_Dependency="_ZA-MOjcqEfCGssOVWCcVrQ" role="nodeType"/>
+  <Tosca:TPropertyDef xmi:id="_ZBfJgDcqEfCGssOVWCcVrQ" base_Property="_ZA-MMjcqEfCGssOVWCcVrQ"/>
+  <Tosca:TPropertyDef xmi:id="_ZBfJgTcqEfCGssOVWCcVrQ" base_Property="_ZA-MNDcqEfCGssOVWCcVrQ"/>
+  <Tosca:TPropertyDef xmi:id="_ZBfJgjcqEfCGssOVWCcVrQ" base_Property="_ZA-MNzcqEfCGssOVWCcVrQ"/>
+  <Tosca:TNodeTemplate xmi:id="_ZBfJgzcqEfCGssOVWCcVrQ" base_Class="_ZA-MOzcqEfCGssOVWCcVrQ"/>
+  <mda:MDAAssocDep xmi:id="_ZBfJhDcqEfCGssOVWCcVrQ" base_Dependency="_ZA-MRDcqEfCGssOVWCcVrQ" role="nodeType"/>
+  <Tosca:TPropertyDef xmi:id="_ZBfJhTcqEfCGssOVWCcVrQ" base_Property="_ZA-MPDcqEfCGssOVWCcVrQ"/>
+  <Tosca:TPropertyDef xmi:id="_ZBfJhjcqEfCGssOVWCcVrQ" base_Property="_ZA-MPjcqEfCGssOVWCcVrQ"/>
+  <Tosca:TPropertyDef xmi:id="_ZBfJhzcqEfCGssOVWCcVrQ" base_Property="_ZA-MQTcqEfCGssOVWCcVrQ"/>
+  <Tosca:TNodeTemplate xmi:id="_ZBfJiDcqEfCGssOVWCcVrQ" base_Class="_ZA-MRTcqEfCGssOVWCcVrQ"/>
+  <mda:MDAAssocDep xmi:id="_ZBfJiTcqEfCGssOVWCcVrQ" base_Dependency="_ZA-MTjcqEfCGssOVWCcVrQ" role="nodeType"/>
+  <Tosca:TPropertyDef xmi:id="_ZBfJijcqEfCGssOVWCcVrQ" base_Property="_ZA-MRjcqEfCGssOVWCcVrQ"/>
+  <Tosca:TPropertyDef xmi:id="_ZBfJizcqEfCGssOVWCcVrQ" base_Property="_ZA-MSDcqEfCGssOVWCcVrQ"/>
+  <Tosca:TPropertyDef xmi:id="_ZBfJjDcqEfCGssOVWCcVrQ" base_Property="_ZA-MSzcqEfCGssOVWCcVrQ"/>
+  <Tosca:TNodeTemplate xmi:id="_ZBfJjTcqEfCGssOVWCcVrQ" base_Class="_ZA-MTzcqEfCGssOVWCcVrQ"/>
+  <mda:MDAAssocDep xmi:id="_ZBfJjjcqEfCGssOVWCcVrQ" base_Dependency="_ZA-MVTcqEfCGssOVWCcVrQ" role="nodeType"/>
+  <Tosca:TPropertyDef xmi:id="_ZBfJjzcqEfCGssOVWCcVrQ" base_Property="_ZA-MUDcqEfCGssOVWCcVrQ"/>
+  <Tosca:TPropertyDef xmi:id="_ZBfwkDcqEfCGssOVWCcVrQ" base_Property="_ZA-MUzcqEfCGssOVWCcVrQ"/>
+  <Tosca:TNodeTemplate xmi:id="_ZBfwkTcqEfCGssOVWCcVrQ" base_Class="_ZA-MVjcqEfCGssOVWCcVrQ"/>
+  <mda:MDAAssocDep xmi:id="_ZBfwkjcqEfCGssOVWCcVrQ" base_Dependency="_ZA-MXDcqEfCGssOVWCcVrQ" role="nodeType"/>
+  <Tosca:TPropertyDef xmi:id="_ZBfwkzcqEfCGssOVWCcVrQ" base_Property="_ZA-MVzcqEfCGssOVWCcVrQ"/>
+  <Tosca:TPropertyDef xmi:id="_ZBfwlDcqEfCGssOVWCcVrQ" base_Property="_ZA-MWjcqEfCGssOVWCcVrQ"/>
+  <Tosca:TNodeTemplate xmi:id="_ZBfwlTcqEfCGssOVWCcVrQ" base_Class="_ZA-MXTcqEfCGssOVWCcVrQ"/>
+  <mda:MDAAssocDep xmi:id="_ZBfwljcqEfCGssOVWCcVrQ" base_Dependency="_ZA-MYzcqEfCGssOVWCcVrQ" role="nodeType"/>
+  <Tosca:TPropertyDef xmi:id="_ZBfwlzcqEfCGssOVWCcVrQ" base_Property="_ZA-MXjcqEfCGssOVWCcVrQ"/>
+  <Tosca:TPropertyDef xmi:id="_ZBfwmDcqEfCGssOVWCcVrQ" base_Property="_ZA-MYTcqEfCGssOVWCcVrQ"/>
+  <Tosca:TNodeTemplate xmi:id="_ZBfwmTcqEfCGssOVWCcVrQ" base_Class="_ZA-MZDcqEfCGssOVWCcVrQ"/>
+  <mda:MDAAssocDep xmi:id="_ZBfwmjcqEfCGssOVWCcVrQ" base_Dependency="_ZA-MajcqEfCGssOVWCcVrQ" role="nodeType"/>
+  <Tosca:TPropertyDef xmi:id="_ZBfwmzcqEfCGssOVWCcVrQ" base_Property="_ZA-MZTcqEfCGssOVWCcVrQ"/>
+  <Tosca:TPropertyDef xmi:id="_ZBfwnDcqEfCGssOVWCcVrQ" base_Property="_ZA-MaDcqEfCGssOVWCcVrQ"/>
+  <Tosca:TNodeTemplate xmi:id="_ZBgXoDcqEfCGssOVWCcVrQ" base_Class="_ZA-MbDcqEfCGssOVWCcVrQ"/>
+  <mda:MDAAssocDep xmi:id="_ZBgXoTcqEfCGssOVWCcVrQ" base_Dependency="_ZA-MbTcqEfCGssOVWCcVrQ" role="nodeType"/>
+  <Tosca:TNodeTemplate xmi:id="_ZBgXojcqEfCGssOVWCcVrQ" base_Class="_ZA-MbjcqEfCGssOVWCcVrQ"/>
+  <mda:MDAAssocDep xmi:id="_ZBgXozcqEfCGssOVWCcVrQ" base_Dependency="_ZA-MbzcqEfCGssOVWCcVrQ" role="nodeType"/>
+  <Tosca:TNodeTemplate xmi:id="_ZBgXpDcqEfCGssOVWCcVrQ" base_Class="_ZA-McDcqEfCGssOVWCcVrQ"/>
+  <mda:MDAAssocDep xmi:id="_ZBgXpTcqEfCGssOVWCcVrQ" base_Dependency="_ZA-MfTcqEfCGssOVWCcVrQ" role="nodeType"/>
+  <Tosca:TPropertyDef xmi:id="_ZBgXpjcqEfCGssOVWCcVrQ" base_Property="_ZA-McTcqEfCGssOVWCcVrQ"/>
+  <Tosca:TPropertyDef xmi:id="_ZBgXpzcqEfCGssOVWCcVrQ" base_Property="_ZA-MczcqEfCGssOVWCcVrQ"/>
+  <Tosca:TPropertyDef xmi:id="_ZBgXqDcqEfCGssOVWCcVrQ" base_Property="_ZA-MdTcqEfCGssOVWCcVrQ"/>
+  <Tosca:TPropertyDef xmi:id="_ZBgXqTcqEfCGssOVWCcVrQ" base_Property="_ZA-MdzcqEfCGssOVWCcVrQ"/>
+  <Tosca:TPropertyDef xmi:id="_ZBgXqjcqEfCGssOVWCcVrQ" base_Property="_ZA-MeTcqEfCGssOVWCcVrQ"/>
+  <Tosca:TPropertyDef xmi:id="_ZBgXqzcqEfCGssOVWCcVrQ" base_Property="_ZA-MezcqEfCGssOVWCcVrQ"/>
+  <Tosca:TNodeTemplate xmi:id="_ZBgXrDcqEfCGssOVWCcVrQ" base_Class="_ZA-MfzcqEfCGssOVWCcVrQ"/>
+  <mda:MDAAssocDep xmi:id="_ZBgXrTcqEfCGssOVWCcVrQ" base_Dependency="_ZA-MjDcqEfCGssOVWCcVrQ" role="nodeType"/>
+  <Tosca:TPropertyDef xmi:id="_ZBgXrjcqEfCGssOVWCcVrQ" base_Property="_ZA-MgDcqEfCGssOVWCcVrQ"/>
+  <Tosca:TPropertyDef xmi:id="_ZBgXrzcqEfCGssOVWCcVrQ" base_Property="_ZA-MgjcqEfCGssOVWCcVrQ"/>
+  <Tosca:TPropertyDef xmi:id="_ZBgXsDcqEfCGssOVWCcVrQ" base_Property="_ZA-MhDcqEfCGssOVWCcVrQ"/>
+  <Tosca:TPropertyDef xmi:id="_ZBg-sDcqEfCGssOVWCcVrQ" base_Property="_ZA-MhjcqEfCGssOVWCcVrQ"/>
+  <Tosca:TPropertyDef xmi:id="_ZBg-sTcqEfCGssOVWCcVrQ" base_Property="_ZA-MiDcqEfCGssOVWCcVrQ"/>
+  <Tosca:TPropertyDef xmi:id="_ZBg-sjcqEfCGssOVWCcVrQ" base_Property="_ZA-MijcqEfCGssOVWCcVrQ"/>
+  <Tosca:TNodeTemplate xmi:id="_ZBg-szcqEfCGssOVWCcVrQ" base_Class="_ZA-MjTcqEfCGssOVWCcVrQ"/>
+  <mda:MDAAssocDep xmi:id="_ZBg-tDcqEfCGssOVWCcVrQ" base_Dependency="_ZA-MjjcqEfCGssOVWCcVrQ" role="nodeType"/>
+  <Tosca:TNodeTemplate xmi:id="_ZBg-tTcqEfCGssOVWCcVrQ" base_Class="_ZA-MjzcqEfCGssOVWCcVrQ"/>
+  <mda:MDAAssocDep xmi:id="_ZBg-tjcqEfCGssOVWCcVrQ" base_Dependency="_ZA-MkDcqEfCGssOVWCcVrQ" role="nodeType"/>
+  <Tosca:TNodeTemplate xmi:id="_ZBg-tzcqEfCGssOVWCcVrQ" base_Class="_ZA-MkTcqEfCGssOVWCcVrQ"/>
+  <mda:MDAAssocDep xmi:id="_ZBg-uDcqEfCGssOVWCcVrQ" base_Dependency="_ZA-MkjcqEfCGssOVWCcVrQ" role="nodeType"/>
+  <Tosca:TNodeTemplate xmi:id="_ZBg-uTcqEfCGssOVWCcVrQ" base_Class="_ZA-MkzcqEfCGssOVWCcVrQ"/>
+  <mda:MDAAssocDep xmi:id="_ZBg-ujcqEfCGssOVWCcVrQ" base_Dependency="_ZA-MlDcqEfCGssOVWCcVrQ" role="nodeType"/>
+  <Tosca:TNodeType xmi:id="_ZBg-uzcqEfCGssOVWCcVrQ" base_Class="_ZA-MlzcqEfCGssOVWCcVrQ"/>
+  <Tosca:PropertyDefinitionType xmi:id="_ZBhlwDcqEfCGssOVWCcVrQ" base_Property="_ZA-MmDcqEfCGssOVWCcVrQ"/>
+  <Tosca:PropertyDefinitionType xmi:id="_ZBhlwTcqEfCGssOVWCcVrQ" base_Property="_ZA-MmTcqEfCGssOVWCcVrQ"/>
+  <Tosca:TNodeType xmi:id="_ZBhlwjcqEfCGssOVWCcVrQ" base_Class="_ZA-MmjcqEfCGssOVWCcVrQ"/>
+  <Tosca:TCapabilityDefinitionsType xmi:id="_ZBiM0DcqEfCGssOVWCcVrQ" base_Class="_ZA-MnjcqEfCGssOVWCcVrQ"/>
+  <Tosca:TCapabilityDefinition xmi:id="_ZBiM0TcqEfCGssOVWCcVrQ" base_Class="_ZA-MnzcqEfCGssOVWCcVrQ"/>
+  <Tosca:PropertyDefinitionType xmi:id="_ZBiM0jcqEfCGssOVWCcVrQ" base_Property="_ZA-MmzcqEfCGssOVWCcVrQ"/>
+  <Tosca:PropertyDefinitionType xmi:id="_ZBiM0zcqEfCGssOVWCcVrQ" base_Property="_ZA-MnTcqEfCGssOVWCcVrQ"/>
+  <Tosca:TNodeType xmi:id="_ZBiM1DcqEfCGssOVWCcVrQ" base_Class="_ZA-MoDcqEfCGssOVWCcVrQ"/>
+  <Tosca:PropertyDefinitionType xmi:id="_ZBiM1TcqEfCGssOVWCcVrQ" base_Property="_ZA-MoTcqEfCGssOVWCcVrQ"/>
+  <Tosca:PropertyDefinitionType xmi:id="_ZBiM1jcqEfCGssOVWCcVrQ" base_Property="_ZA-MojcqEfCGssOVWCcVrQ"/>
+  <Tosca:PropertyDefinitionType xmi:id="_ZBiz4DcqEfCGssOVWCcVrQ" base_Property="_ZA-MpDcqEfCGssOVWCcVrQ"/>
+  <Tosca:TNodeType xmi:id="_ZBiz4TcqEfCGssOVWCcVrQ" base_Class="_ZA-zMDcqEfCGssOVWCcVrQ"/>
+  <Tosca:PropertyDefinitionType xmi:id="_ZBiz4jcqEfCGssOVWCcVrQ" base_Property="_ZA-zMTcqEfCGssOVWCcVrQ"/>
+  <Tosca:PropertyDefinitionType xmi:id="_ZBiz4zcqEfCGssOVWCcVrQ" base_Property="_ZA-zMjcqEfCGssOVWCcVrQ"/>
+  <Tosca:TNodeType xmi:id="_ZBiz5DcqEfCGssOVWCcVrQ" base_Class="_ZA-zNDcqEfCGssOVWCcVrQ"/>
+  <Tosca:PropertyDefinitionType xmi:id="_ZBiz5TcqEfCGssOVWCcVrQ" base_Property="_ZA-zNTcqEfCGssOVWCcVrQ"/>
+  <Tosca:TNodeType xmi:id="_ZBja8DcqEfCGssOVWCcVrQ" base_Class="_ZA-zNjcqEfCGssOVWCcVrQ"/>
+  <Tosca:TCapabilityDefinitionsType xmi:id="_ZBja8TcqEfCGssOVWCcVrQ" base_Class="_ZA-zODcqEfCGssOVWCcVrQ"/>
+  <Tosca:TCapabilityDefinition xmi:id="_ZBja8jcqEfCGssOVWCcVrQ" base_Class="_ZA-zOTcqEfCGssOVWCcVrQ"/>
+  <Tosca:PropertyDefinitionType xmi:id="_ZBja8zcqEfCGssOVWCcVrQ" base_Property="_ZA-zNzcqEfCGssOVWCcVrQ"/>
+  <Tosca:TNodeType xmi:id="_ZBja9DcqEfCGssOVWCcVrQ" base_Class="_ZA-zOjcqEfCGssOVWCcVrQ"/>
+  <Tosca:PropertyDefinitionType xmi:id="_ZBja9TcqEfCGssOVWCcVrQ" base_Property="_ZA-zOzcqEfCGssOVWCcVrQ"/>
+  <Tosca:TNodeType xmi:id="_ZBja9jcqEfCGssOVWCcVrQ" base_Class="_ZA-zPDcqEfCGssOVWCcVrQ"/>
+  <Tosca:PropertyDefinitionType xmi:id="_ZBja9zcqEfCGssOVWCcVrQ" base_Property="_ZA-zPTcqEfCGssOVWCcVrQ"/>
+  <Tosca:TNodeType xmi:id="_ZBkCADcqEfCGssOVWCcVrQ" base_Class="_ZA-zPjcqEfCGssOVWCcVrQ"/>
+  <Tosca:PropertyDefinitionType xmi:id="_ZBkCATcqEfCGssOVWCcVrQ" base_Property="_ZA-zPzcqEfCGssOVWCcVrQ"/>
+  <Tosca:TNodeType xmi:id="_ZBkCAjcqEfCGssOVWCcVrQ" base_Class="_ZA-zQTcqEfCGssOVWCcVrQ"/>
+  <Tosca:PropertyDefinitionType xmi:id="_ZBkCAzcqEfCGssOVWCcVrQ" base_Property="_ZA-zQjcqEfCGssOVWCcVrQ"/>
+  <Tosca:TNodeType xmi:id="_ZBkCBDcqEfCGssOVWCcVrQ" base_Class="_ZA-zRDcqEfCGssOVWCcVrQ"/>
+  <Tosca:TRequirementDefinitionType xmi:id="_ZBkCBTcqEfCGssOVWCcVrQ" base_Class="_ZA-zRjcqEfCGssOVWCcVrQ"/>
+  <Tosca:TRequirementDefinition xmi:id="_ZBkCBjcqEfCGssOVWCcVrQ" base_Class="_ZA-zRzcqEfCGssOVWCcVrQ"/>
+  <mda:MDAAssocDep xmi:id="_ZBkCBzcqEfCGssOVWCcVrQ" base_Dependency="_ZA-zSDcqEfCGssOVWCcVrQ" role="nodeType"/>
+  <Tosca:PropertyDefinitionType xmi:id="_ZBkpEDcqEfCGssOVWCcVrQ" base_Property="_ZA-zRTcqEfCGssOVWCcVrQ"/>
+  <Tosca:TNodeType xmi:id="_ZBkpETcqEfCGssOVWCcVrQ" base_Class="_ZA-zSTcqEfCGssOVWCcVrQ"/>
+  <Tosca:PropertyDefinitionType xmi:id="_ZBkpEjcqEfCGssOVWCcVrQ" base_Property="_ZA-zSjcqEfCGssOVWCcVrQ"/>
+  <Tosca:TNodeTemplate xmi:id="_ZBkpEzcqEfCGssOVWCcVrQ" base_Class="_ZA-zSzcqEfCGssOVWCcVrQ"/>
+  <mda:MDAAssocDep xmi:id="_ZBkpFDcqEfCGssOVWCcVrQ" base_Dependency="_ZA-zUDcqEfCGssOVWCcVrQ" role="nodeType"/>
+  <Tosca:RequirementsType xmi:id="_ZBkpFTcqEfCGssOVWCcVrQ" base_Class="_ZA-zTDcqEfCGssOVWCcVrQ"/>
+  <Tosca:TRequirement xmi:id="_ZBlQIDcqEfCGssOVWCcVrQ" base_Class="_ZA-zTTcqEfCGssOVWCcVrQ"/>
+  <mda:MDAAssocDep xmi:id="_ZBlQITcqEfCGssOVWCcVrQ" base_Dependency="_ZA-zUTcqEfCGssOVWCcVrQ" role="node"/>
+  <Tosca:TRequirement xmi:id="_ZBlQIjcqEfCGssOVWCcVrQ" base_Class="_ZA-zTjcqEfCGssOVWCcVrQ"/>
+  <mda:MDAAssocDep xmi:id="_ZBlQIzcqEfCGssOVWCcVrQ" base_Dependency="_ZA-zUjcqEfCGssOVWCcVrQ" role="node"/>
+  <mda:MDAAssocDep xmi:id="_ZBlQJDcqEfCGssOVWCcVrQ" base_Dependency="_ZA-zUzcqEfCGssOVWCcVrQ" role="capability"/>
+  <Tosca:TCapability xmi:id="_ZBlQJTcqEfCGssOVWCcVrQ" base_Class="_ZA-zTzcqEfCGssOVWCcVrQ"/>
+  <Tosca:TNodeTemplate xmi:id="_ZBlQJjcqEfCGssOVWCcVrQ" base_Class="_ZA-zVDcqEfCGssOVWCcVrQ"/>
+  <mda:MDAAssocDep xmi:id="_ZBlQJzcqEfCGssOVWCcVrQ" base_Dependency="_ZA-zVTcqEfCGssOVWCcVrQ" role="nodeType"/>
+</xmi:XMI>

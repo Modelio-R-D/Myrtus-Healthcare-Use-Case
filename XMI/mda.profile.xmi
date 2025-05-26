@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Profile xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_ZBcGMDcqEfCGssOVWCcVrQ" name="mda" metaclassReference="_ZBcGQjcqEfCGssOVWCcVrQ _ZBcGQzcqEfCGssOVWCcVrQ _ZBcGRDcqEfCGssOVWCcVrQ">
+  <eAnnotations xmi:id="_ZBcGMTcqEfCGssOVWCcVrQ" source="Objing">
+    <contents xmi:type="uml:Property" xmi:id="_ZBcGMjcqEfCGssOVWCcVrQ" name="Module">
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_ZBcGMzcqEfCGssOVWCcVrQ" value="00000000-0000-2710-0000-000000000000"/>
+    </contents>
+    <contents xmi:type="uml:Property" xmi:id="_ZBcGNDcqEfCGssOVWCcVrQ" name="ID">
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_ZBcGNTcqEfCGssOVWCcVrQ" value="051f4291-f151-4147-99c5-fd78221f49e2"/>
+    </contents>
+  </eAnnotations>
+  <eAnnotations xmi:id="_ZBcGNjcqEfCGssOVWCcVrQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+    <contents xmi:type="ecore:EPackage" xmi:id="_ZBcGNzcqEfCGssOVWCcVrQ" name="mda" nsURI="http:///schemas/mda/_ZBFg4DcqEfCGssOVWCcVrQ/0" nsPrefix="mda">
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_ZBcGODcqEfCGssOVWCcVrQ" name="MDAAssocDep">
+        <eAnnotations xmi:id="_ZBcGOTcqEfCGssOVWCcVrQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_ZBcGRTcqEfCGssOVWCcVrQ"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_ZBcGOjcqEfCGssOVWCcVrQ" name="base_Dependency" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Dependency"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_ZBcGPDcqEfCGssOVWCcVrQ" name="base_Extend" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Extend"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_ZBcGPjcqEfCGssOVWCcVrQ" name="base_Include" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Include"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_ZBcGQDcqEfCGssOVWCcVrQ" name="role" ordered="false">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </contents>
+  </eAnnotations>
+  <elementImport xmi:id="_ZBcGQjcqEfCGssOVWCcVrQ">
+    <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Dependency"/>
+  </elementImport>
+  <elementImport xmi:id="_ZBcGQzcqEfCGssOVWCcVrQ">
+    <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Extend"/>
+  </elementImport>
+  <elementImport xmi:id="_ZBcGRDcqEfCGssOVWCcVrQ">
+    <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Include"/>
+  </elementImport>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_ZBcGRTcqEfCGssOVWCcVrQ" name="MDAAssocDep">
+    <eAnnotations xmi:id="_ZBcGRjcqEfCGssOVWCcVrQ" source="Objing">
+      <contents xmi:type="uml:Property" xmi:id="_ZBcGRzcqEfCGssOVWCcVrQ" name="ID">
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_ZBcGSDcqEfCGssOVWCcVrQ" value="94b7efa5-f94c-4d1d-896f-f103e56a8e2e"/>
+      </contents>
+    </eAnnotations>
+    <ownedAttribute xmi:id="_ZBcGSTcqEfCGssOVWCcVrQ" name="base_Dependency" association="_ZBcGUjcqEfCGssOVWCcVrQ">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Dependency"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_ZBcGSjcqEfCGssOVWCcVrQ" name="base_Extend" association="_ZBcGVDcqEfCGssOVWCcVrQ">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Extend"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_ZBcGSzcqEfCGssOVWCcVrQ" name="base_Include" association="_ZBcGVjcqEfCGssOVWCcVrQ">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Include"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_ZBcGTDcqEfCGssOVWCcVrQ" name="role">
+      <eAnnotations xmi:id="_ZBcGTTcqEfCGssOVWCcVrQ" source="Objing">
+        <contents xmi:type="uml:Property" xmi:id="_ZBcGTjcqEfCGssOVWCcVrQ" name="ID">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_ZBcGTzcqEfCGssOVWCcVrQ" value="7637f2fd-b750-43c1-a15c-5d0b084ca1cd"/>
+        </contents>
+      </eAnnotations>
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZBcGUDcqEfCGssOVWCcVrQ" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZBcGUTcqEfCGssOVWCcVrQ"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_ZBcGUjcqEfCGssOVWCcVrQ" name="Dependency_MDAAssocDep" memberEnd="_ZBcGUzcqEfCGssOVWCcVrQ _ZBcGSTcqEfCGssOVWCcVrQ">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_ZBcGUzcqEfCGssOVWCcVrQ" name="extension_MDAAssocDep" type="_ZBcGRTcqEfCGssOVWCcVrQ" aggregation="composite" association="_ZBcGUjcqEfCGssOVWCcVrQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_ZBcGVDcqEfCGssOVWCcVrQ" name="Extend_MDAAssocDep" memberEnd="_ZBcGVTcqEfCGssOVWCcVrQ _ZBcGSjcqEfCGssOVWCcVrQ">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_ZBcGVTcqEfCGssOVWCcVrQ" name="extension_MDAAssocDep" type="_ZBcGRTcqEfCGssOVWCcVrQ" aggregation="composite" association="_ZBcGVDcqEfCGssOVWCcVrQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_ZBcGVjcqEfCGssOVWCcVrQ" name="Include_MDAAssocDep" memberEnd="_ZBcGVzcqEfCGssOVWCcVrQ _ZBcGSzcqEfCGssOVWCcVrQ">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_ZBcGVzcqEfCGssOVWCcVrQ" name="extension_MDAAssocDep" type="_ZBcGRTcqEfCGssOVWCcVrQ" aggregation="composite" association="_ZBcGVjcqEfCGssOVWCcVrQ"/>
+  </packagedElement>
+</uml:Profile>
