@@ -2,7 +2,7 @@
 <!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="VRClient1" version="4">
   <OBJECT>
     <ID name="VRClient1" mc="Standard.Class" uid="537752be-c6b4-4a10-96da-13af4d7df2bf"/>
-    <PID name="Fog Group" mc="Standard.Package" uid="3b037dbb-070a-4bde-94e2-8b53cb0d9323"/>
+    <PID name="Fog Group" mc="Standard.Class" uid="9d2b0c89-470e-4eb5-b023-2c88b88310cd"/>
     <ATTRIBUTES>
       <ATT name="IsActive">false</ATT>
       <ATT name="IsMain">false</ATT>

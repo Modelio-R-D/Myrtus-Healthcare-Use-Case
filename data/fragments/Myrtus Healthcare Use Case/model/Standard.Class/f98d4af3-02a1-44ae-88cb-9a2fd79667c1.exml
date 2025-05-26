@@ -2,7 +2,7 @@
 <!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="SensorDataProcessing" version="4">
   <OBJECT>
     <ID name="SensorDataProcessing" mc="Standard.Class" uid="f98d4af3-02a1-44ae-88cb-9a2fd79667c1"/>
-    <PID name="Software Component node types" mc="Standard.Package" uid="286d4847-3377-420b-afed-9b63d4030a26"/>
+    <PID name="Software Component node types" mc="Standard.Class" uid="8ebd9bc8-3aa3-4321-ba5a-6b05179f1523"/>
     <ATTRIBUTES>
       <ATT name="IsActive">false</ATT>
       <ATT name="IsMain">false</ATT>

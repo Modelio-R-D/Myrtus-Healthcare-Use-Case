@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Requirements" version="4">
+  <OBJECT>
+    <ID name="Requirements" mc="Standard.Class" uid="6d58d039-262a-4d1a-864a-62d61c2f74e5"/>
+    <PID name="Analytics1" mc="Standard.Class" uid="f775414e-3bd6-426a-8fd7-7ae1780a73fd"/>
+    <ATTRIBUTES>
+      <ATT name="IsActive">false</ATT>
+      <ATT name="IsMain">false</ATT>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Requirements]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="compute_host" mc="Standard.Class" uid="753df348-1b7b-4d92-b969-dc51fdd16704"/>
+        <COMPID name="game_data_source" mc="Standard.Class" uid="1645e359-6887-4247-b359-985cecca1746"/>
+        <COMPID name="patient_data_source" mc="Standard.Class" uid="c3c79cd8-c7d2-403c-a39d-4b6e61dcf181"/>
+      </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="RequirementsType" mc="Infrastructure.Stereotype" uid="1a39bd85-e28f-4e17-b2e9-a1803359cd83"/>
+      </LINK>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Requirements" version="4">
+  <OBJECT>
+    <ID name="Requirements" mc="Standard.Class" uid="1271ef78-a986-468c-8c04-eeabbc154946"/>
+    <PID name="AILearning1 " mc="Standard.Class" uid="bc14ab89-a664-4648-a313-38149a9ea2da"/>
+    <ATTRIBUTES>
+      <ATT name="IsActive">false</ATT>
+      <ATT name="IsMain">false</ATT>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Requirements]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="compute_host" mc="Standard.Class" uid="4c842aed-822e-40b3-aeed-b80e34d0fb5d"/>
+        <COMPID name="training_data_source" mc="Standard.Class" uid="ea7cc724-1d82-4e1c-a914-1bf43daa2707"/>
+        <COMPID name="processed_sensor_data_source" mc="Standard.Class" uid="0bda8ad8-d08e-44a1-bda0-eafaff6323e4"/>
+      </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="RequirementsType" mc="Infrastructure.Stereotype" uid="1a39bd85-e28f-4e17-b2e9-a1803359cd83"/>
+      </LINK>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

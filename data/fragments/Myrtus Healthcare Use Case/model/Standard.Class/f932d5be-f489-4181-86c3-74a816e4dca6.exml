@@ -2,7 +2,7 @@
 <!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="CloudServer" version="4">
   <OBJECT>
     <ID name="CloudServer" mc="Standard.Class" uid="f932d5be-f489-4181-86c3-74a816e4dca6"/>
-    <PID name="Compute node types" mc="Standard.Package" uid="f5a69f69-e625-4c37-bfa4-ee66bb5802fe"/>
+    <PID name="Compute node types" mc="Standard.Class" uid="e8cee3fa-ee7f-46ed-8a9e-1f20663ceb53"/>
     <ATTRIBUTES>
       <ATT name="IsActive">false</ATT>
       <ATT name="IsMain">false</ATT>

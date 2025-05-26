@@ -2,7 +2,7 @@
 <!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="SensorHub" version="4">
   <OBJECT>
     <ID name="SensorHub" mc="Standard.Class" uid="7a5fddcd-c7cf-4269-a87f-8b9fdb18108e"/>
-    <PID name="Compute node types" mc="Standard.Package" uid="f5a69f69-e625-4c37-bfa4-ee66bb5802fe"/>
+    <PID name="Compute node types" mc="Standard.Class" uid="e8cee3fa-ee7f-46ed-8a9e-1f20663ceb53"/>
     <ATTRIBUTES>
       <ATT name="IsActive">false</ATT>
       <ATT name="IsMain">false</ATT>

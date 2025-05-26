@@ -14,9 +14,9 @@
     </ATTRIBUTES>
     <DEPENDENCIES>
       <COMP relation="OwnedElement">
-        <COMPID name="Node types" mc="Standard.Package" uid="1cc970cc-b055-429a-8e14-152e4622437b"/>
-        <COMPID name="Node templates" mc="Standard.Package" uid="7ce043ba-788e-4194-8ada-7a175c75803f"/>
         <COMPID name="Policies" mc="Standard.Class" uid="0986b83c-5d5a-4c75-b921-aad0f4662f17"/>
+        <COMPID name="Node types" mc="Standard.Class" uid="9d5f29a6-1a10-455b-9a47-a1d8b304c4c2"/>
+        <COMPID name="Node templates" mc="Standard.Class" uid="9dcc3ce2-48e3-4458-818d-8c48240eb276"/>
       </COMP>
       <LINK relation="Extension">
         <FOREIGNID name="TServiceTemplate" mc="Infrastructure.Stereotype" uid="09682faf-27b8-4c4b-a5e6-22fe18303161"/>

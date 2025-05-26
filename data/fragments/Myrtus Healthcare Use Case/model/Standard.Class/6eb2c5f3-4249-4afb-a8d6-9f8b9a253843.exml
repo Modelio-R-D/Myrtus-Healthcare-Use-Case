@@ -2,7 +2,7 @@
 <!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="SensorHub1 " version="4">
   <OBJECT>
     <ID name="SensorHub1 " mc="Standard.Class" uid="6eb2c5f3-4249-4afb-a8d6-9f8b9a253843"/>
-    <PID name="Edge Group" mc="Standard.Package" uid="ea263602-608b-4d19-85e5-ef69628302b3"/>
+    <PID name="Edge Group" mc="Standard.Class" uid="0ebfe478-47d6-4c32-b7b7-532195d8babe"/>
     <ATTRIBUTES>
       <ATT name="IsActive">false</ATT>
       <ATT name="IsMain">false</ATT>

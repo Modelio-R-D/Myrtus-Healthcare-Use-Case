@@ -2,7 +2,7 @@
 <!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="CloudServer1" version="4">
   <OBJECT>
     <ID name="CloudServer1" mc="Standard.Class" uid="a7284cf9-e1e8-4e78-9b7e-1030b00471e0"/>
-    <PID name="Cloud Group" mc="Standard.Package" uid="e8d7d15a-2466-4f42-817a-eb15c5a47015"/>
+    <PID name="Cloud Group" mc="Standard.Class" uid="3b9e42e6-d297-4920-b3fd-d02b97d6d3fc"/>
     <ATTRIBUTES>
       <ATT name="IsActive">false</ATT>
       <ATT name="IsMain">false</ATT>

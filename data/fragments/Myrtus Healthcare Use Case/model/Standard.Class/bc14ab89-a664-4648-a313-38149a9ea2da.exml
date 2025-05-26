@@ -2,7 +2,7 @@
 <!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="AILearning1 " version="4">
   <OBJECT>
     <ID name="AILearning1 " mc="Standard.Class" uid="bc14ab89-a664-4648-a313-38149a9ea2da"/>
-    <PID name="Cloud Group" mc="Standard.Package" uid="e8d7d15a-2466-4f42-817a-eb15c5a47015"/>
+    <PID name="Cloud Group" mc="Standard.Class" uid="3b9e42e6-d297-4920-b3fd-d02b97d6d3fc"/>
     <ATTRIBUTES>
       <ATT name="IsActive">false</ATT>
       <ATT name="IsMain">false</ATT>
@@ -15,6 +15,9 @@
       <ATT name="status">1970354901745664</ATT>
     </ATTRIBUTES>
     <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Requirements" mc="Standard.Class" uid="1271ef78-a986-468c-8c04-eeabbc154946"/>
+      </COMP>
       <LINK relation="Extension">
         <FOREIGNID name="TNodeTemplate" mc="Infrastructure.Stereotype" uid="1a20bf91-0a92-434a-9d1f-35c86788784e"/>
       </LINK>

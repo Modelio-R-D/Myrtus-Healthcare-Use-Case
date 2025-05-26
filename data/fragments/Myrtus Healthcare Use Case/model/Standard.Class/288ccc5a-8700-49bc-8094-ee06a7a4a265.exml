@@ -16,8 +16,11 @@
     </ATTRIBUTES>
     <DEPENDENCIES>
       <COMP relation="OwnedElement">
-        <COMPID name="host" mc="Standard.Class" uid="8cbff9e2-f835-4ccb-84e6-3e8e1ae7e414"/>
-        <COMPID name="connect_to" mc="Standard.Class" uid="b70370e9-06b9-43bd-b87c-197583b6317c"/>
+        <COMPID name="VRClient1.host" mc="Standard.Class" uid="8cbff9e2-f835-4ccb-84e6-3e8e1ae7e414"/>
+        <COMPID name="local_game_logic" mc="Standard.Class" uid="b70370e9-06b9-43bd-b87c-197583b6317c"/>
+        <COMPID name="central_game_state_sync" mc="Standard.Class" uid="866436b1-80f1-4bfd-bd42-9cb4cd2d2625"/>
+        <COMPID name="sensor_data_input" mc="Standard.Class" uid="752a583a-b1b1-4c71-98de-4709cbc71856"/>
+        <COMPID name="p2p_communication" mc="Standard.Class" uid="0cd4659e-7db3-45f1-b705-ed1bff250708"/>
       </COMP>
       <LINK relation="Extension">
         <FOREIGNID name="RequirementsType" mc="Infrastructure.Stereotype" uid="1a39bd85-e28f-4e17-b2e9-a1803359cd83"/>

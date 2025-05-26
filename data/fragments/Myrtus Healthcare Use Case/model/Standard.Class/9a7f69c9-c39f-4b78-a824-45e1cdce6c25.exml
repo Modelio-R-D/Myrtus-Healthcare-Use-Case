@@ -2,7 +2,7 @@
 <!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="VALogic" version="4">
   <OBJECT>
     <ID name="VALogic" mc="Standard.Class" uid="9a7f69c9-c39f-4b78-a824-45e1cdce6c25"/>
-    <PID name="Software Component node types" mc="Standard.Package" uid="286d4847-3377-420b-afed-9b63d4030a26"/>
+    <PID name="Software Component node types" mc="Standard.Class" uid="8ebd9bc8-3aa3-4321-ba5a-6b05179f1523"/>
     <ATTRIBUTES>
       <ATT name="IsActive">false</ATT>
       <ATT name="IsMain">false</ATT>

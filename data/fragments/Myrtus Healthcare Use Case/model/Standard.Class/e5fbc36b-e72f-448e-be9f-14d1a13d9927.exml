@@ -2,7 +2,7 @@
 <!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="DataStorage" version="4">
   <OBJECT>
     <ID name="DataStorage" mc="Standard.Class" uid="e5fbc36b-e72f-448e-be9f-14d1a13d9927"/>
-    <PID name="Software Component node types" mc="Standard.Package" uid="286d4847-3377-420b-afed-9b63d4030a26"/>
+    <PID name="Software Component node types" mc="Standard.Class" uid="8ebd9bc8-3aa3-4321-ba5a-6b05179f1523"/>
     <ATTRIBUTES>
       <ATT name="IsActive">false</ATT>
       <ATT name="IsMain">false</ATT>

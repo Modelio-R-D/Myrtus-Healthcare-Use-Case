@@ -2,7 +2,7 @@
 <!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="VRClient" version="4">
   <OBJECT>
     <ID name="VRClient" mc="Standard.Class" uid="130eb713-6ea0-420b-89b5-a86fb7b5bcdf"/>
-    <PID name="Software Component node types" mc="Standard.Package" uid="286d4847-3377-420b-afed-9b63d4030a26"/>
+    <PID name="Software Component node types" mc="Standard.Class" uid="8ebd9bc8-3aa3-4321-ba5a-6b05179f1523"/>
     <ATTRIBUTES>
       <ATT name="IsActive">false</ATT>
       <ATT name="IsMain">false</ATT>

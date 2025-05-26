@@ -2,7 +2,7 @@
 <!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Analytics1" version="4">
   <OBJECT>
     <ID name="Analytics1" mc="Standard.Class" uid="f775414e-3bd6-426a-8fd7-7ae1780a73fd"/>
-    <PID name="Cloud Group" mc="Standard.Package" uid="e8d7d15a-2466-4f42-817a-eb15c5a47015"/>
+    <PID name="Cloud Group" mc="Standard.Class" uid="3b9e42e6-d297-4920-b3fd-d02b97d6d3fc"/>
     <ATTRIBUTES>
       <ATT name="IsActive">false</ATT>
       <ATT name="IsMain">false</ATT>
@@ -15,6 +15,9 @@
       <ATT name="status">1970354901745664</ATT>
     </ATTRIBUTES>
     <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Requirements" mc="Standard.Class" uid="6d58d039-262a-4d1a-864a-62d61c2f74e5"/>
+      </COMP>
       <LINK relation="Extension">
         <FOREIGNID name="TNodeTemplate" mc="Infrastructure.Stereotype" uid="1a20bf91-0a92-434a-9d1f-35c86788784e"/>
       </LINK>

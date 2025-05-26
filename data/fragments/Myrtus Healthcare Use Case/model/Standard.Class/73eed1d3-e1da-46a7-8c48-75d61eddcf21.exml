@@ -2,7 +2,7 @@
 <!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="AnalyticsMonitoring" version="4">
   <OBJECT>
     <ID name="AnalyticsMonitoring" mc="Standard.Class" uid="73eed1d3-e1da-46a7-8c48-75d61eddcf21"/>
-    <PID name="Software Component node types" mc="Standard.Package" uid="286d4847-3377-420b-afed-9b63d4030a26"/>
+    <PID name="Software Component node types" mc="Standard.Class" uid="8ebd9bc8-3aa3-4321-ba5a-6b05179f1523"/>
     <ATTRIBUTES>
       <ATT name="IsActive">false</ATT>
       <ATT name="IsMain">false</ATT>

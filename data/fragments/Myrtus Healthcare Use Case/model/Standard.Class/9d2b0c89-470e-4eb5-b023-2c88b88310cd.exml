@@ -1,10 +1,12 @@
 <?xml version="1.0" ?>
 <!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Fog Group" version="4">
   <OBJECT>
-    <ID name="Fog Group" mc="Standard.Package" uid="3b037dbb-070a-4bde-94e2-8b53cb0d9323"/>
-    <PID name="Node templates" mc="Standard.Package" uid="7ce043ba-788e-4194-8ada-7a175c75803f"/>
+    <ID name="Fog Group" mc="Standard.Class" uid="9d2b0c89-470e-4eb5-b023-2c88b88310cd"/>
+    <PID name="Node templates" mc="Standard.Class" uid="9dcc3ce2-48e3-4458-818d-8c48240eb276"/>
     <ATTRIBUTES>
-      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsActive">false</ATT>
+      <ATT name="IsMain">false</ATT>
+      <ATT name="IsElementary">false</ATT>
       <ATT name="IsAbstract">false</ATT>
       <ATT name="IsLeaf">false</ATT>
       <ATT name="IsRoot">false</ATT>
@@ -15,10 +17,10 @@
     <DEPENDENCIES>
       <COMP relation="OwnedElement">
         <COMPID name="SensorDataProc1" mc="Standard.Class" uid="0a562254-f80f-460b-a2f7-e20c581f75f0"/>
-        <COMPID name="VALogic1" mc="Standard.Class" uid="a20f6bd5-9435-4f18-b5b9-0078e893c404"/>
         <COMPID name="PartialGameServer1" mc="Standard.Class" uid="55e5fd67-1023-420c-b5d1-a3ceca36cef0"/>
         <COMPID name="FogServer1" mc="Standard.Class" uid="1ab5ccba-4e34-4164-b202-0341e5c75dd4"/>
         <COMPID name="VRClient1" mc="Standard.Class" uid="537752be-c6b4-4a10-96da-13af4d7df2bf"/>
+        <COMPID name="VALogic1" mc="Standard.Class" uid="04fb546c-504c-45d5-9328-66f6b76de75f"/>
       </COMP>
       <LINK relation="Extension">
         <FOREIGNID name="TGroup" mc="Infrastructure.Stereotype" uid="572d5cb4-54c7-45d0-a9c8-3dc3677f9ef3"/>

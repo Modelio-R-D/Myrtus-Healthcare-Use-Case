@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
-<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="host" version="4">
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="VRClient1.host" version="4">
   <OBJECT>
-    <ID name="host" mc="Standard.Class" uid="8cbff9e2-f835-4ccb-84e6-3e8e1ae7e414"/>
+    <ID name="VRClient1.host" mc="Standard.Class" uid="8cbff9e2-f835-4ccb-84e6-3e8e1ae7e414"/>
     <PID name="Requirements" mc="Standard.Class" uid="288ccc5a-8700-49bc-8094-ee06a7a4a265"/>
     <ATTRIBUTES>
       <ATT name="IsActive">false</ATT>
@@ -11,7 +11,7 @@
       <ATT name="IsLeaf">false</ATT>
       <ATT name="IsRoot">false</ATT>
       <ATT name="Visibility">Public</ATT>
-      <ATT name="Name"><![CDATA[host]]></ATT>
+      <ATT name="Name"><![CDATA[VRClient1.host]]></ATT>
       <ATT name="status">1970354901745664</ATT>
     </ATTRIBUTES>
     <DEPENDENCIES>

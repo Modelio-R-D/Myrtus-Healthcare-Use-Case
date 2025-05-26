@@ -1,10 +1,12 @@
 <?xml version="1.0" ?>
 <!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Software Component node types" version="4">
   <OBJECT>
-    <ID name="Software Component node types" mc="Standard.Package" uid="286d4847-3377-420b-afed-9b63d4030a26"/>
-    <PID name="Node types" mc="Standard.Package" uid="1cc970cc-b055-429a-8e14-152e4622437b"/>
+    <ID name="Software Component node types" mc="Standard.Class" uid="8ebd9bc8-3aa3-4321-ba5a-6b05179f1523"/>
+    <PID name="Node types" mc="Standard.Class" uid="9d5f29a6-1a10-455b-9a47-a1d8b304c4c2"/>
     <ATTRIBUTES>
-      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsActive">false</ATT>
+      <ATT name="IsMain">false</ATT>
+      <ATT name="IsElementary">false</ATT>
       <ATT name="IsAbstract">false</ATT>
       <ATT name="IsLeaf">false</ATT>
       <ATT name="IsRoot">false</ATT>

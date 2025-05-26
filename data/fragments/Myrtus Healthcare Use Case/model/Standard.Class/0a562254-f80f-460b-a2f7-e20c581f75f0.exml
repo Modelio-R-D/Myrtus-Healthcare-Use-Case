@@ -2,7 +2,7 @@
 <!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="SensorDataProc1" version="4">
   <OBJECT>
     <ID name="SensorDataProc1" mc="Standard.Class" uid="0a562254-f80f-460b-a2f7-e20c581f75f0"/>
-    <PID name="Fog Group" mc="Standard.Package" uid="3b037dbb-070a-4bde-94e2-8b53cb0d9323"/>
+    <PID name="Fog Group" mc="Standard.Class" uid="9d2b0c89-470e-4eb5-b023-2c88b88310cd"/>
     <ATTRIBUTES>
       <ATT name="IsActive">false</ATT>
       <ATT name="IsMain">false</ATT>
@@ -15,6 +15,9 @@
       <ATT name="status">1970354901745664</ATT>
     </ATTRIBUTES>
     <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Requirements" mc="Standard.Class" uid="d22d605d-ad88-40b4-973e-f31551154f82"/>
+      </COMP>
       <LINK relation="Extension">
         <FOREIGNID name="TNodeTemplate" mc="Infrastructure.Stereotype" uid="1a20bf91-0a92-434a-9d1f-35c86788784e"/>
       </LINK>
