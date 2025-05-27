@@ -21,6 +21,7 @@
         <COMPID name="PatientDataStorage1" mc="Standard.Class" uid="52c9746f-69cd-443d-b507-6935c9af0041"/>
         <COMPID name="Analytics1" mc="Standard.Class" uid="f775414e-3bd6-426a-8fd7-7ae1780a73fd"/>
         <COMPID name="AILearning1 " mc="Standard.Class" uid="bc14ab89-a664-4648-a313-38149a9ea2da"/>
+        <COMPID name="TherapistWorkstation" mc="Standard.Class" uid="2e202f4a-f153-4ba8-b5c0-eab7ba6eff3a"/>
       </COMP>
       <LINK relation="Extension">
         <FOREIGNID name="TGroup" mc="Infrastructure.Stereotype" uid="572d5cb4-54c7-45d0-a9c8-3dc3677f9ef3"/>
